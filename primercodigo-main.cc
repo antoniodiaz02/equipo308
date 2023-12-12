@@ -27,8 +27,13 @@ int main() {
                 break;
 
             case 3:
-                // Implementar la opción de modificar actividad si es necesario
-                // Puedes agregar otra función similar a CrearActividad para la modificación
+                
+                int idModificar;
+                cout << "Ingrese el ID de la actividad a modificar: ";
+                cin >> idModificar;
+                ActividadesAcademicas::ModificarActividadPorID(idModificar);
+                break;
+            
                 break;
 
             case 4:
