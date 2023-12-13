@@ -2,7 +2,21 @@
 
 using namespace std;
 
+const string CONTRASENA_ORGANIZADOR = "123";
+const string CONTRASENA_DIRECTOR = "123";
+
+
 void menuOrganizador() {
+    string contrasena;
+    // Solicitar la contraseña al organizador
+    cout << "Ingrese la contraseña de organizador: ";
+    cin >> contrasena;
+
+    if (contrasena != CONTRASENA_ORGANIZADOR) {
+        cout << "Error de autenticación. Programa finalizado." << endl;
+        return;
+    }
+
     int opcionOrganizador;
 
     cout << "Menú Organizador:" << endl;
@@ -37,6 +51,17 @@ void menuOrganizador() {
 }
 
 void menuDirectorAcademico() {
+
+    string contrasena;
+    // Solicitar la contraseña al director académico
+    cout << "Ingrese la contraseña de director académico: ";
+    cin >> contrasena;
+
+    if (contrasena != CONTRASENA_DIRECTOR) {
+        cout << "Error de autenticación. Programa finalizado." << endl;
+        return;
+    }
+
     int opcionDirector;
 
     cout << "Menú Director Académico:" << endl;
