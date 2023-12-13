@@ -142,151 +142,56 @@ ActividadesAcademicas CrearActividad()
 
 
 
-    void ActividadesAcademicas::ModificarActividadPorID(int id) {
-    ifstream archivoEntrada("actividad.txt");
-    ofstream archivoTemp("temp.txt", ios::app);
+void ActividadesAcademicas::modificarActividadPorID() {
+    int id;
+    std::cout << "Ingrese el ID de la actividad que desea modificar: ";
+    std::cin >> id;
 
-    if (!archivoEntrada.is_open() || !archivoTemp.is_open()) {
-        cerr << "Error al abrir los archivos.\n";
-        return;
-    }
+    // Abrir el archivo para lectura y escritura
+    std::ifstream inFile("actividades.txt");
+    std::ofstream outFile("temp.txt");
 
-    string linea;
     bool actividadEncontrada = false;
 
-    while (getline(archivoEntrada, linea)) {
-        size_t pos = linea.find("ID: ");
-        if (pos != string::npos) {
-            int idEncontrado = stoi(linea.substr(pos + 4));
-            if (idEncontrado == id) {
-                actividadEncontrada = true;
-
-                // Mostrar la actividad actual
-                cout << "Actividad Actual:\n" << linea << endl;
-
-                // Pedir al usuario que modifique cada campo
-                cout << "¿Desea modificar el nombre? (S/N): ";
-                char respuesta;
-                cin >> respuesta;
-
-                if (toupper(respuesta) == 'S') {
-                    cout << "Ingrese el nuevo nombre de la actividad: ";
-                    string nuevoNombre;
-                    cin.ignore();
-                    getline(cin, nuevoNombre);
-
-                    // Actualizar la línea con el nuevo nombre
-                    size_t posNombre = linea.find("Nombre: ");
-                    if (posNombre != string::npos) {
-                        linea.replace(posNombre + 8, linea.find("\n", posNombre) - (posNombre + 8), nuevoNombre);
-                    }
-                }
-
-                // Repetir el proceso para otros campos
-                cout << "¿Desea modificar la fecha? (S/N): ";
-                cin >> respuesta;
-
-                if (toupper(respuesta) == 'S') {
-                    cout << "Ingrese la nueva fecha de la actividad: ";
-                    string nuevaFecha;
-                    cin.ignore();
-                    getline(cin, nuevaFecha);
-                    size_t posFecha = linea.find("Fecha: ");
-                    if (posFecha != string::npos) {
-                        linea.replace(posFecha + 7, linea.find("\n", posFecha) - (posFecha + 7), nuevaFecha);
-                    }
-                }
-
-                // Repetir para otros campos...
-                cout << "¿Desea modificar la tematica? (S/N): ";
-                cin >> respuesta;
-
-                if (toupper(respuesta) == 'S') {
-                    cout << "Ingrese la nueva tematica de la actividad: ";
-                    string nuevaTematica;
-                    cin.ignore();
-                    getline(cin, nuevaTematica);
-                    size_t posTematica = linea.find("Tematica: ");
-                    if (posTematica != string::npos) {
-                        linea.replace(posTematica + 10, linea.find("\n", posTematica) - (posTematica + 10), nuevaTematica);
-                    }
-                }
-
-                cout << "¿Desea modificar el aforo? (S/N): ";
-                cin >> respuesta;
-
-                if (toupper(respuesta) == 'S') {
-                    cout << "Ingrese el nuevo aforo de la actividad: ";
-                    int nuevoAforo;
-                    cin >> nuevoAforo;
-                    size_t posAforo = linea.find("Aforo: ");
-                    if (posAforo != string::npos) {
-                        linea.replace(posAforo + 7, linea.find("\n", posAforo) - (posAforo + 7), to_string(nuevoAforo));
-                    }
-                }
-
-                cout << "¿Desea modificar la ubicacion? (S/N): ";
-                cin >> respuesta;
-
-                if (toupper(respuesta) == 'S') {
-                    cout << "Ingrese la nueva ubicacion de la actividad: ";
-                    string nuevaUbicacion;
-                    cin.ignore();
-                    getline(cin, nuevaUbicacion);
-                    size_t posUbicacion = linea.find("Ubicacion: ");
-                    if (posUbicacion != string::npos) {
-                        linea.replace(posUbicacion + 11, linea.find("\n", posUbicacion) - (posUbicacion + 11), nuevaUbicacion);
-                    }
-                }
-
-                cout << "¿Desea modificar el precio? (S/N): ";
-                cin >> respuesta;
-
-                if (toupper(respuesta) == 'S') {
-                    cout << "Ingrese el nuevo precio de la actividad: ";
-                    float nuevoPrecio;
-                    cin >> nuevoPrecio;
-                    size_t posPrecio = linea.find("Precio: ");
-                    if (posPrecio != string::npos) {
-                        linea.replace(posPrecio + 8, linea.find("\n", posPrecio) - (posPrecio + 8), to_string(nuevoPrecio));
-                    }
-                }
-
-                cout << "¿Desea modificar el tipo? (S/N): ";
-                cin >> respuesta;
-
-                if (toupper(respuesta) == 'S') {
-                    cout << "Ingrese el nuevo tipo de la actividad: ";
-                    string nuevoTipo;
-                    cin.ignore();
-                    getline(cin, nuevoTipo);
-                    size_t posTipo = linea.find("Tipo: ");
-                    if (posTipo != string::npos) {
-                        linea.replace(posTipo + 6, linea.find("\n", posTipo) - (posTipo + 6), nuevoTipo);
-                    }
-                }
-
-                cout << "Actividad Modificada:\n" << linea << endl;
-            }
+    while (inFile >> ID >> Nombre >> Fecha >> Tematica >> Aforo >> Ubicacion >> Precio >> Tipo >> ID_Director) {
+        // Verificar si esta es la actividad que queremos modificar
+        if (ID == id) {
+            actividadEncontrada = true;
+            std::cout << "Ingrese los nuevos valores para la actividad:" << std::endl;
+            std::cout << "Nombre: ";
+            std::cin >> Nombre;
+            std::cout << "Fecha: ";
+            std::cin >> Fecha;
+            std::cout << "Tematica: ";
+            std::cin >> Tematica;
+            std::cout << "Aforo: ";
+            std::cin >> Aforo;
+            std::cout << "Ubicacion: ";
+            std::cin >> Ubicacion;
+            std::cout << "Precio: ";
+            std::cin >> Precio;
+            std::cout << "Tipo: ";
+            std::cin >> Tipo;
+            std::cout << "ID_Director: ";
+            std::cin >> ID_Director;
         }
-        archivoTemp << linea << '\n';
+
+        // Escribir la actividad (modificada o no) en el nuevo archivo
+        outFile << ID << " " << Nombre << " " << Fecha << " " << Tematica << " " << Aforo << " " << Ubicacion << " " << Precio << " " << Tipo
+                << " " << ID_Director << std::endl;
     }
 
-    archivoEntrada.close();
-    archivoTemp.close();
+    // Cerrar los archivos
+    inFile.close();
+    outFile.close();
 
-    // Renombrar el archivo temporal al archivo original
-    if (actividadEncontrada) {
-        if (remove("actividad.txt") != 0) {
-            cerr << "Error al borrar el archivo original.\n";
-            return;
-        }
-        if (rename("temp.txt", "actividad.txt") != 0) {
-            cerr << "Error al renombrar el archivo temporal.\n";
-        }
+    // Renombrar el nuevo archivo como el archivo original
+    remove("actividades.txt");
+    rename("temp.txt", "actividades.txt");
+
+    if (!actividadEncontrada) {
+        std::cout << "No se encontró ninguna actividad con el ID proporcionado." << std::endl;
     } else {
-        remove("temp.txt");  // No se encontró la actividad, eliminar el archivo temporal
-        cout << "No se encontró ninguna actividad con el ID proporcionado.\n";
+        std::cout << "Actividad modificada exitosamente." << std::endl;
     }
 }
-    

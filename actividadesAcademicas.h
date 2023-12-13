@@ -29,6 +29,7 @@ class ActividadesAcademicas
         static void EliminarActividadPorID(int id);
         static void ModificarActividadPorID(int id);
         static void MostrarTodasActividades();
+	static void modificarActividadPorID();
 };
 
 #endif
