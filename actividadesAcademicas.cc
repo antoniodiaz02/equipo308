@@ -1,8 +1,5 @@
-#include "actividadesAcademicas.h"
-#include <fstream> 
-
 ActividadesAcademicas::ActividadesAcademicas(int id_actividad_, string nombre_, string fecha_, string tematica_,
-                                            int aforo_, string ubicacion_, float precio_, string tipo_) 
+                                            int aforo_, string ubicacion_, float precio_, string tipo_,int id_director_) 
  {
     id_actividad = id_actividad_;
     nombre = nombre_;
@@ -12,22 +9,23 @@ ActividadesAcademicas::ActividadesAcademicas(int id_actividad_, string nombre_, 
     ubicacion = ubicacion_;
     precio = precio_;
     tipo = tipo_;
+    id_director = id_director_;
 }
+
 
 string ActividadesAcademicas::MostrarActividad() 
 {
     return "ID: " + to_string(id_actividad) + "\nNombre: " + nombre + "\nFecha: " + fecha + "\nTematica: " + tematica +
            "\nAforo: " + to_string(aforo) + "\nUbicacion: " + ubicacion +
-           "\nPrecio: " + to_string(precio) + "\nTipo: " + tipo + "\n\n";
+           "\nPrecio: " + to_string(precio) + "\nTipo: " + tipo + "\nID_Director: " + to_string(id_director) + "\n\n";
 }
 
 
 ActividadesAcademicas CrearActividad()
 {
-
     int id;
     string nombre, fecha, tematica, ubicacion, tipo;
-    int aforo;
+    int aforo, id_director;
     float precio;
 
     cout << "Ingrese el ID de la actividad: ";
@@ -57,14 +55,16 @@ ActividadesAcademicas CrearActividad()
     cin.ignore();  
     getline(cin, tipo);
 
-    ActividadesAcademicas actividad(id, nombre, fecha, tematica, aforo, ubicacion, precio, tipo);
+    cout << "Ingrese el ID del director asociado a la actividad: ";
+    cin >> id_director;
+
+    ActividadesAcademicas actividad(id, nombre, fecha, tematica, aforo, ubicacion, precio, tipo, id_director);
 
     ofstream archivo("actividad.txt", ios::app);
 
     if (archivo.is_open()) 
     {
-        
-        archivo << actividad.MostrarActividad();
+        archivo << actividad.MostrarActividad() << " " << endl;
         cout << "\nActividad creada y agregada a 'actividad.txt'.\n";
 
         archivo.close();
@@ -73,6 +73,8 @@ ActividadesAcademicas CrearActividad()
     {
         cout << "Error al abrir el archivo para escribir.\n";
     }
+
+    return actividad;
 }
 
 

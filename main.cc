@@ -23,10 +23,9 @@ void menuOrganizador() {
     cout << "1. Crear actividad académica" << endl;
     cout << "2. Eliminar actividad académica" << endl;
     cout << "3. Modificar actividad académica" << endl;
-    cout << "4. Asignar actividad académica a un director" << endl;
-    cout << "5. Cambiar rol a alguien" << endl;
-    cout << "6. Crear mailing" << endl;
-    cout << "7. Borrar mailing" << endl;
+    cout << "4. Cambiar rol a alguien" << endl;
+    cout << "5. Crear mailing" << endl;
+    cout << "6. Borrar mailing" << endl;
     cout << "Ingrese el número correspondiente a su elección: ";
     cin >> opcionOrganizador;
 
