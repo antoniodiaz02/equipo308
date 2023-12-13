@@ -1,5 +1,5 @@
-#include "primercodigo.h"
-#include "primercodigo.cc"
+#include "actividadesAcademicas.h"
+#include "actividadesAcademicas.cc"
 
 int main() {
     int opcion;

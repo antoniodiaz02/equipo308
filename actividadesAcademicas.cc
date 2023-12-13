@@ -1,4 +1,4 @@
-#include "primercodigo.h"
+#include "actividadesAcademicas.h"
 #include <fstream> 
 
 ActividadesAcademicas::ActividadesAcademicas(int id_actividad_, string nombre_, string fecha_, string tematica_,
