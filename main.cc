@@ -1,3 +1,5 @@
+#include "actividadesAcademicas.h"
+#include "actividadesAcademicas.cc"
 #include <iostream>
 
 using namespace std;
@@ -34,11 +36,17 @@ void menuOrganizador() {
         case 1:
             cout << "Seleccionaste: Crear actividad académica" << endl;
             // Agrega el código para crear actividad académica
+            CrearActividad();
+
             break;
 
         case 2:
             cout << "Seleccionaste: Eliminar actividad académica" << endl;
             // Agrega el código para eliminar actividad académica
+            int idEliminar;
+            cout << "Ingrese el ID de la actividad a eliminar: ";
+            cin >> idEliminar;
+            ActividadesAcademicas::EliminarActividadPorID(idEliminar);
             break;
 
         // ... Agrega más casos según tus necesidades ...
@@ -79,6 +87,7 @@ void menuDirectorAcademico() {
         case 2:
             cout << "Seleccionaste: Ver actividades académicas disponibles" << endl;
             // Agrega el código para ver actividades académicas disponibles
+            ActividadesAcademicas::MostrarTodasActividades();
             break;
 
         default:
@@ -112,6 +121,7 @@ void menuUsuario() {
         case 3:
             cout << "Seleccionaste: Ver actividades disponibles" << endl;
             // Agrega el código para ver actividades disponibles
+            ActividadesAcademicas::MostrarTodasActividades();
             break;
 
         default:

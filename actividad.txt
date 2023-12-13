@@ -10,3 +10,23 @@ Tipo: 1
 ID_Director: 1
 
  
+Nombre: 12
+Fecha: hoy
+Tematica: oscuro
+Aforo: 200
+Ubicacion: aqui
+Precio: 8.000000
+Tipo: tipi
+ID_Director: 45
+
+ 
+Nombre: 33
+Fecha: 33
+Tematica: 33
+Aforo: 33
+Ubicacion: 33
+Precio: 33.000000
+Tipo: 33
+ID_Director: 33
+
+ 

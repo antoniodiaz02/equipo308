@@ -141,7 +141,7 @@ ActividadesAcademicas CrearActividad()
 
 
 
-
+/* 
 void ActividadesAcademicas::modificarActividadPorID() {
     int id;
     std::cout << "Ingrese el ID de la actividad que desea modificar: ";
@@ -195,3 +195,4 @@ void ActividadesAcademicas::modificarActividadPorID() {
         std::cout << "Actividad modificada exitosamente." << std::endl;
     }
 }
+*/
