@@ -27,7 +27,7 @@ class ActividadesAcademicas
         ActividadesAcademicas(int id_actividad_, string nombre_, string fecha_, string tematica_, int aforo_, string ubicacion_, float precio_, string tipo_, int id_director_);
         string MostrarActividad();
         static void EliminarActividadPorID(int id);
-        // static void ModificarActividadPorID(int id);
+        static void ModificarActividadPorID(int id);
         static void MostrarTodasActividades();
 	    // static void modificarActividadPorID();
 };

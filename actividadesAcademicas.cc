@@ -118,7 +118,7 @@ ActividadesAcademicas CrearActividad()
             std::cerr << "Error al renombrar el archivo temporal.\n";
         }
     } else {
-        std::remove("temp.txt");  // No se encontró la actividad, eliminar el archivo temporal
+        std::remove("temp.txt");  // No se enccontró la actividad, eliminar el archivo temporal
         std::cout << "No se encontró ninguna actividad con el ID proporcionado.\n";
     }
     }
@@ -141,58 +141,100 @@ ActividadesAcademicas CrearActividad()
 
 
 
-/* 
-void ActividadesAcademicas::modificarActividadPorID() {
-    int id;
-    std::cout << "Ingrese el ID de la actividad que desea modificar: ";
-    std::cin >> id;
+void ActividadesAcademicas::ModificarActividadPorID(int id)
+{
+    ifstream inFile("actividad.txt");
+    ofstream outFile("temp.txt");
 
-    // Abrir el archivo para lectura y escritura
-    std::ifstream inFile("actividades.txt");
-    std::ofstream outFile("temp.txt");
-
-    bool actividadEncontrada = false;
-
-    while (inFile >> ID >> Nombre >> Fecha >> Tematica >> Aforo >> Ubicacion >> Precio >> Tipo >> ID_Director) {
-        // Verificar si esta es la actividad que queremos modificar
-        if (ID == id) {
-            actividadEncontrada = true;
-            std::cout << "Ingrese los nuevos valores para la actividad:" << std::endl;
-            std::cout << "Nombre: ";
-            std::cin >> Nombre;
-            std::cout << "Fecha: ";
-            std::cin >> Fecha;
-            std::cout << "Tematica: ";
-            std::cin >> Tematica;
-            std::cout << "Aforo: ";
-            std::cin >> Aforo;
-            std::cout << "Ubicacion: ";
-            std::cin >> Ubicacion;
-            std::cout << "Precio: ";
-            std::cin >> Precio;
-            std::cout << "Tipo: ";
-            std::cin >> Tipo;
-            std::cout << "ID_Director: ";
-            std::cin >> ID_Director;
-        }
-
-        // Escribir la actividad (modificada o no) en el nuevo archivo
-        outFile << ID << " " << Nombre << " " << Fecha << " " << Tematica << " " << Aforo << " " << Ubicacion << " " << Precio << " " << Tipo
-                << " " << ID_Director << std::endl;
+    if (!inFile || !outFile)
+    {
+        cerr << "Error al abrir los archivos." << endl;
+        return;
     }
 
-    // Cerrar los archivos
+    bool encontrado = false;
+    string line;
+
+    while (getline(inFile, line))
+    {
+        if (line.find("ID: " + to_string(id)) == 0)
+        {
+            encontrado = true;
+            cout << "Actividad actual:" << endl << line << endl;
+
+            cout << "¿Desea modificar esta actividad? (S/N): ";
+            char respuesta;
+            cin >> respuesta;
+
+            if (toupper(respuesta) == 'N')
+            {
+                outFile << line << endl;
+                continue;
+            }
+
+            // Preguntar por cada campo
+            outFile << "ID: " << id << endl;
+
+            cout << "Nuevo Nombre: ";
+            string nombre;
+            cin.ignore(); // Limpiar el buffer del teclado
+            getline(cin, nombre);
+            outFile << "Nombre: " << nombre << endl;
+
+            cout << "Nueva Fecha: ";
+            string fecha;
+            getline(cin, fecha);
+            outFile << "Fecha: " << fecha << endl;
+
+            cout << "Nueva Tematica: ";
+            string tematica;
+            getline(cin, tematica);
+            outFile << "Tematica: " << tematica << endl;
+
+            cout << "Nuevo Aforo: ";
+            int aforo;
+            cin >> aforo;
+            outFile << "Aforo: " << aforo << endl;
+
+            cout << "Nueva Ubicacion: ";
+            string ubicacion;
+            cin.ignore(); // Limpiar el buffer del teclado
+            getline(cin, ubicacion);
+            outFile << "Ubicacion: " << ubicacion << endl;
+
+            cout << "Nuevo Precio: ";
+            double precio;
+            cin >> precio;
+            outFile << "Precio: " << precio << endl;
+
+            cout << "Nuevo Tipo: ";
+            string tipo;
+            cin.ignore(); // Limpiar el buffer del teclado
+            getline(cin, tipo);
+            outFile << "Tipo: " << tipo << endl;
+
+            cout << "Nuevo ID_Director: ";
+            int id_director;
+            cin >> id_director;
+            outFile << "ID_Director: " << id_director << endl;
+
+            cout << "Actividad modificada con éxito." << endl;
+	    break;
+        }
+        else
+        {
+            outFile << line << endl;
+        }
+    }
+
     inFile.close();
     outFile.close();
 
-    // Renombrar el nuevo archivo como el archivo original
-    remove("actividades.txt");
-    rename("temp.txt", "actividades.txt");
+    remove("actividad.txt");
+    rename("temp.txt", "actividad.txt");
 
-    if (!actividadEncontrada) {
-        std::cout << "No se encontró ninguna actividad con el ID proporcionado." << std::endl;
-    } else {
-        std::cout << "Actividad modificada exitosamente." << std::endl;
+    if (!encontrado)
+    {
+        cout << "Actividad con ID " << id << " no encontrada." << endl;
     }
 }
-*/

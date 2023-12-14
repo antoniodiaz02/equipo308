@@ -33,27 +33,54 @@ void menuOrganizador() {
 
     // Agrega el código para manejar las opciones del menú del organizador
     switch (opcionOrganizador) {
-        case 1:
-            cout << "Seleccionaste: Crear actividad académica" << endl;
-            // Agrega el código para crear actividad académica
-            CrearActividad();
+	case 1:
+        cout << "Seleccionaste: Crear actividad académica" << endl;
+        // Agrega el código para crear actividad académica
+        CrearActividad();
+        break;
 
-            break;
+    case 2:
+        cout << "Seleccionaste: Eliminar actividad académica" << endl;
+        // Agrega el código para eliminar actividad académica
+        int idEliminar;
+        cout << "Ingrese el ID de la actividad a eliminar: ";
+        cin >> idEliminar;
+        ActividadesAcademicas::EliminarActividadPorID(idEliminar);
+        break;
 
-        case 2:
-            cout << "Seleccionaste: Eliminar actividad académica" << endl;
-            // Agrega el código para eliminar actividad académica
-            int idEliminar;
-            cout << "Ingrese el ID de la actividad a eliminar: ";
-            cin >> idEliminar;
-            ActividadesAcademicas::EliminarActividadPorID(idEliminar);
-            break;
+    case 3:
+        cout << "Seleccionaste: Modificar actividad académica" << endl;
+        // Agrega el código para modificar actividad académica
+        int idModificar;
+        cout << "Ingrese el ID de la actividad a modificar: ";
+        cin >> idModificar;
+        ActividadesAcademicas::ModificarActividadPorID(idModificar);
+        break;
 
-        // ... Agrega más casos según tus necesidades ...
+    case 4:
+        cout << "Seleccionaste: Cambiar rol a alguien" << endl;
+        // Agrega el código para cambiar el rol de alguien
+        // ...
 
-        default:
-            cout << "Opción no válida. Por favor, seleccione una opción válida." << endl;
-            break;
+        break;
+
+    case 5:
+        cout << "Seleccionaste: Crear mailing" << endl;
+        // Agrega el código para crear mailing
+        // ...
+
+        break;
+
+    case 6:
+        cout << "Seleccionaste: Borrar mailing" << endl;
+        // Agrega el código para borrar mailing
+        // ...
+
+        break;
+
+    default:
+        cout << "Opción no válida. Por favor, seleccione una opción válida." << endl;
+        break;
     }
 }
 
