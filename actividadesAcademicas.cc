@@ -78,9 +78,8 @@ ActividadesAcademicas CrearActividad()
 }
 
 
-    void ActividadesAcademicas::EliminarActividadPorID(int id) 
-    {
-
+    void ActividadesAcademicas::EliminarActividadPorID(int id) {
+        
     std::ifstream archivoEntrada("actividad.txt");
     std::ofstream archivoTemp("temp.txt");
 
@@ -93,12 +92,15 @@ ActividadesAcademicas CrearActividad()
     bool actividadEncontrada = false;
 
     while (std::getline(archivoEntrada, linea)) {
-        // Supongamos que cada actividad en el archivo tiene el formato "ID: <id>"
         size_t pos = linea.find("ID: ");
         if (pos != std::string::npos) {
             int idEncontrado = std::stoi(linea.substr(pos + 4));
             if (idEncontrado == id) {
                 actividadEncontrada = true;
+                // No copiar la línea actual al archivo temporal (ignorar toda la actividad)
+                while (std::getline(archivoEntrada, linea) && !linea.empty()) {
+                    continue;
+                }
                 continue;  // No copiar la línea actual al archivo temporal
             }
         }
@@ -109,7 +111,7 @@ ActividadesAcademicas CrearActividad()
     archivoTemp.close();
 
     // Renombrar el archivo temporal al archivo original
-    if(actividadEncontrada) {
+    if (actividadEncontrada) {
         if (std::remove("actividad.txt") != 0) {
             std::cerr << "Error al borrar el archivo original.\n";
             return;
@@ -117,11 +119,13 @@ ActividadesAcademicas CrearActividad()
         if (std::rename("temp.txt", "actividad.txt") != 0) {
             std::cerr << "Error al renombrar el archivo temporal.\n";
         }
+        std::cout << "Actividad eliminada correctamente.\n";
     } else {
-        std::remove("temp.txt");  // No se enccontró la actividad, eliminar el archivo temporal
+        std::remove("temp.txt");  // No se encontró la actividad, eliminar el archivo temporal
         std::cout << "No se encontró ninguna actividad con el ID proporcionado.\n";
     }
-    }
+}
+
 
     void ActividadesAcademicas::MostrarTodasActividades() {
     ifstream archivoEntrada("actividad.txt");
@@ -144,7 +148,7 @@ ActividadesAcademicas CrearActividad()
 void ActividadesAcademicas::ModificarActividadPorID(int id)
 {
     ifstream inFile("actividad.txt");
-    ofstream outFile("temp.txt");
+    ofstream outFile("temp_modificado.txt");
 
     if (!inFile || !outFile)
     {
@@ -168,11 +172,11 @@ void ActividadesAcademicas::ModificarActividadPorID(int id)
 
             if (toupper(respuesta) == 'N')
             {
-                outFile << line << endl;
+                outFile << line << endl; // No modificar, escribir tal cual
                 continue;
             }
 
-            // Preguntar por cada campo
+            // Preguntar por cada campo, excepto ID
             outFile << "ID: " << id << endl;
 
             cout << "Nuevo Nombre: ";
@@ -219,11 +223,10 @@ void ActividadesAcademicas::ModificarActividadPorID(int id)
             outFile << "ID_Director: " << id_director << endl;
 
             cout << "Actividad modificada con éxito." << endl;
-	    break;
         }
         else
         {
-            outFile << line << endl;
+            outFile << line << endl; // No es la actividad a modificar, escribir tal cual
         }
     }
 
@@ -231,10 +234,11 @@ void ActividadesAcademicas::ModificarActividadPorID(int id)
     outFile.close();
 
     remove("actividad.txt");
-    rename("temp.txt", "actividad.txt");
+    rename("temp_modificado.txt", "actividad.txt");
 
     if (!encontrado)
     {
         cout << "Actividad con ID " << id << " no encontrada." << endl;
     }
 }
+
