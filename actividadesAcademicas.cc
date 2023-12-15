@@ -1,3 +1,4 @@
+#include "actividadesAcademicas.h"
 ActividadesAcademicas::ActividadesAcademicas(int id_actividad_, string nombre_, string fecha_, string tematica_,
                                             int aforo_, string ubicacion_, float precio_, string tipo_,int id_director_) 
  {
