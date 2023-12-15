@@ -1,72 +1,53 @@
-#ifndef LISTAUSUARIOS_H
-#define LISTAUSUARIOS_H
-
-
-#include "usuario.h"
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <list>
 #include <iostream>
-#include "actividadesAcademicas.h"
+#include <vector>
+#include <fstream>
+#include "usuario.h"
 
-using namespace std;
+class ListaUsuarios {
+private:
+    int aforo;
+    std::vector<Usuario> listaUsuarios;
+    int id_actividad;
 
-class Lista{
-    private:
-        int aforo_;
-        list<Usuario> v;
-        int idActividad_;
-    public:
-        //Constructor copia
-        Lista(Lista const & aux){
-            aforo_=aux.aforo_;
-            idActividad_=aux.idActividad_;
-        }
+public:
+    // Constructor
+    ListaUsuarios(int aforo, int id_actividad) : aforo(aforo), id_actividad(id_actividad) {}
 
-        //Observadores y modificadores
-            //Observadores
-            int getAforo(){
-                return aforo_;
-            }
+    // Métodos de acceso (getters)
+    int getAforo() const {
+        return aforo;
+    }
 
-            int getIDActividad(){
-                return idActividad_;
-            }
+    int getIdActividad() const {
+        return id_actividad;
+    }
 
+    const std::vector<Usuario>& getListaUsuarios() const {
+        return listaUsuarios;
+    }
 
-            //Modificadores
-            void setAforo(int aforo){
-                aforo_=aforo;
-            }
+    // Métodos de modificación (setters)
+    void setAforo(int nuevoAforo) {
+        aforo = nuevoAforo;
+    }
 
-            void setIDActividad(int idActividad){
-                idActividad_=idActividad;
-            }
-        //funcion que comprueba si el usuario esta dentro de la actividad o no
-        bool usuarioAñadido(const Usuario& usuario, const std::vector<Usuario>& listaUsuarios) {
-            for (const Usuario& usuarioExistente : listaUsuarios) {
-                if (usuarioExistente.getID() == Usuario.getID()) {
-                    return true;
-                }
-            }   
-            return false;
-        }
-        //funcion que añade al vector un nuevo usuario 
-        bool añadirUsuarioActividad(int idActividad,int idUsuario){
-            if(idActividad!=getIDActividad()){
-                return false;
-            }
+    void setIdActividad(int nuevoIdActividad) {
+        id_actividad = nuevoIdActividad;
+    }
 
-            for(auto it = v.begin();it!=v.end();it++){
-                if(it->getID()==idUsuario){
-                    return false;
-                }
-            }
+    // Método para añadir usuario a la lista
+    void añadirUsuario(const Usuario& usuario) {
+        listaUsuarios.push_back(usuario);
+    }
 
-            if()
-        }
+    //Comprobar si un usuario ya esta añadido
+    bool usuarioAñadido(const Usuario& usuario, const std::vector<Usuario>& listaUsuarios);
+
+    //Ver si una actividad existe
+    bool actividadExistente(int idActividad);
+
+    //Añadirlo si se cumple
+    
+    void añadirUsuarioActividad(int id_usuario, int idActividad);
+
 };
-
-
-#endif

@@ -1,56 +1,47 @@
 #ifndef USUARIO_H
 #define USUARIO_H
 
-
 #include <iostream>
-#include <fstream>
 #include <string>
 
-using namespace std;
+class Usuario {
+private:
+    std::string nombre;
+    int id_usuario;
+    std::string correo;
 
-class Usuario{
-    private:
-        string nombre_;
-        int idUsuario_;
-        string email_;
-    public:
-        //Constructor Copia
-        Usuario(Usuario const & aux){
-            nombre_=aux.nombre_;
-            idUsuario_=aux.idUsuario_;
-            email_=aux.email_;
-        }
-        //Obseravdores y modificadores
-            //Observadores
-            string getNombre(){
-                return nombre_;
-            }
+public:
+    // Constructor
+    Usuario(const std::string& nombre, int id_usuario, const std::string& correo)
+        : nombre(nombre), id_usuario(id_usuario), correo(correo) {}
 
-            string getEmail(){
-                return email_;
-            }
-            int getID(){
-                return idUsuario_;
-            }
+    // Métodos de acceso (getters)
+    std::string getNombre() const {
+        return nombre;
+    }
 
-            //Modificadores
-            void setNombre(string nombre){
-                nombre_=nombre;
-            }
+    int getIdUsuario() const {
+        return id_usuario;
+    }
 
-            void setID(int id){
-                idUsuario_=id;
-            }
+    std::string getCorreo() const {
+        return correo;
+    }
 
-            void setEmail(string mail){
-                email_=mail;
-            }
-        
+    // Métodos de modificación (setters)
+    void setNombre(const std::string& nuevoNombre) {
+        nombre = nuevoNombre;
+    }
 
+    void setIdUsuario(int nuevoIdUsuario) {
+        id_usuario = nuevoIdUsuario;
+    }
 
+    void setCorreo(const std::string& nuevoCorreo) {
+        correo = nuevoCorreo;
+    }
+
+    
 };
-
-
-
 
 #endif
