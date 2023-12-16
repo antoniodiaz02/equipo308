@@ -160,33 +160,41 @@ void menuUsuario() {
 int main() {
     int opcion;
 
-    cout << "Seleccione su rol:" << endl;
-    cout << "1. Organizador" << endl;
-    cout << "2. Director Academico" << endl;
-    cout << "3. Usuario" << endl;
-    cout << "Ingrese el número correspondiente a su elección: ";
-    cin >> opcion;
+    do {
+        cout << "Seleccione su rol:" << endl;
+        cout << "1. Organizador" << endl;
+        cout << "2. Director Academico" << endl;
+        cout << "3. Usuario" << endl;
+        cout << "4. Salir" << endl;
+        cout << "Ingrese el número correspondiente a su elección: ";
+        cin >> opcion;
 
-    switch (opcion) {
-        case 1:
-            cout << "¡Bienvenido, Organizador!" << endl;
-            menuOrganizador();
-            break;
+        switch (opcion) {
+            case 1:
+                cout << "¡Bienvenido, Organizador!" << endl;
+                menuOrganizador();
+                break;
 
-        case 2:
-            cout << "¡Hola, Director Academico!" << endl;
-            menuDirectorAcademico();
-            break;
+            case 2:
+                cout << "¡Hola, Director Academico!" << endl;
+                menuDirectorAcademico();
+                break;
 
-        case 3:
-            cout << "¡Hola, Usuario!" << endl;
-            menuUsuario();
-            break;
+            case 3:
+                cout << "¡Hola, Usuario!" << endl;
+                menuUsuario();
+                break;
 
-        default:
-            cout << "Opción no válida. Por favor, seleccione una opción válida." << endl;
-            break;
-    }
+            case 4:
+                cout << "Saliendo del programa. ¡Hasta luego!" << endl;
+                break;
+
+            default:
+                cout << "Opción no válida. Por favor, seleccione una opción válida." << endl;
+                break;
+        }
+
+    } while (opcion != 4);
 
     return 0;
 }

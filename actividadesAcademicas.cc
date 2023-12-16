@@ -146,100 +146,53 @@ ActividadesAcademicas CrearActividad()
 
 
 
-void ActividadesAcademicas::ModificarActividadPorID(int id)
-{
-    ifstream inFile("actividad.txt");
-    ofstream outFile("temp_modificado.txt");
+void ActividadesAcademicas::ModificarActividadPorID(int id) {
 
-    if (!inFile || !outFile)
-    {
-        cerr << "Error al abrir los archivos." << endl;
+ std::ifstream archivoEntrada("actividad.txt");
+    std::ofstream archivoTemp("temp.txt");
+
+    if (!archivoEntrada.is_open() || !archivoTemp.is_open()) {
+        std::cerr << "Error al abrir los archivos.\n";
         return;
     }
 
-    bool encontrado = false;
-    string line;
+    std::string linea;
+    bool actividadEncontrada = false;
 
-    while (getline(inFile, line))
-    {
-        if (line.find("ID: " + to_string(id)) == 0)
-        {
-            encontrado = true;
-            cout << "Actividad actual:" << endl << line << endl;
-
-            cout << "¿Desea modificar esta actividad? (S/N): ";
-            char respuesta;
-            cin >> respuesta;
-
-            if (toupper(respuesta) == 'N')
-            {
-                outFile << line << endl; // No modificar, escribir tal cual
-                continue;
+    while (std::getline(archivoEntrada, linea)) {
+        size_t pos = linea.find("ID: ");
+        if (pos != std::string::npos) {
+            int idEncontrado = std::stoi(linea.substr(pos + 4));
+            if (idEncontrado == id) {
+                actividadEncontrada = true;
+                // No copiar la línea actual al archivo temporal (ignorar toda la actividad)
+                while (std::getline(archivoEntrada, linea) && !linea.empty()) {
+                    continue;
+                }
+                continue;  // No copiar la línea actual al archivo temporal
             }
-
-            // Preguntar por cada campo, excepto ID
-            outFile << "ID: " << id << endl;
-
-            cout << "Nuevo Nombre: ";
-            string nombre;
-            cin.ignore(); // Limpiar el buffer del teclado
-            getline(cin, nombre);
-            outFile << "Nombre: " << nombre << endl;
-
-            cout << "Nueva Fecha: ";
-            string fecha;
-            getline(cin, fecha);
-            outFile << "Fecha: " << fecha << endl;
-
-            cout << "Nueva Tematica: ";
-            string tematica;
-            getline(cin, tematica);
-            outFile << "Tematica: " << tematica << endl;
-
-            cout << "Nuevo Aforo: ";
-            int aforo;
-            cin >> aforo;
-            outFile << "Aforo: " << aforo << endl;
-
-            cout << "Nueva Ubicacion: ";
-            string ubicacion;
-            cin.ignore(); // Limpiar el buffer del teclado
-            getline(cin, ubicacion);
-            outFile << "Ubicacion: " << ubicacion << endl;
-
-            cout << "Nuevo Precio: ";
-            double precio;
-            cin >> precio;
-            outFile << "Precio: " << precio << endl;
-
-            cout << "Nuevo Tipo: ";
-            string tipo;
-            cin.ignore(); // Limpiar el buffer del teclado
-            getline(cin, tipo);
-            outFile << "Tipo: " << tipo << endl;
-
-            cout << "Nuevo ID_Director: ";
-            int id_director;
-            cin >> id_director;
-            outFile << "ID_Director: " << id_director << endl;
-
-            cout << "Actividad modificada con éxito." << endl;
         }
-        else
-        {
-            outFile << line << endl; // No es la actividad a modificar, escribir tal cual
-        }
+        archivoTemp << linea << '\n';
     }
 
-    inFile.close();
-    outFile.close();
+    archivoEntrada.close();
+    archivoTemp.close();
 
-    remove("actividad.txt");
-    rename("temp_modificado.txt", "actividad.txt");
-
-    if (!encontrado)
-    {
-        cout << "Actividad con ID " << id << " no encontrada." << endl;
+    // Renombrar el archivo temporal al archivo original
+    if (actividadEncontrada) {
+        if (std::remove("actividad.txt") != 0) {
+            std::cerr << "Error al borrar el archivo original.\n";
+            return;
+        }
+        if (std::rename("temp.txt", "actividad.txt") != 0) {
+            std::cerr << "Error al renombrar el archivo temporal.\n";
+        }
+        std::cout << "Modificando actividad....\n";
+    } else {
+        std::remove("temp.txt");  // No se encontró la actividad, eliminar el archivo temporal
+        std::cout << "No se encontró ninguna actividad con el ID proporcionado.\n";
     }
+
+    // Llamar a la función CrearActividad para crear y agregar la nueva versión de la actividad
+    CrearActividad();
 }
-
