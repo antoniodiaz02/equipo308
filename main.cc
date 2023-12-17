@@ -25,6 +25,7 @@ void menuOrganizador() {
    int opcionOrganizador;
    
    do {
+        cout<<"\n";
         cout << "Menú Organizador:" << endl;
         cout << "1. Crear actividad académica" << endl;
         cout << "2. Eliminar actividad académica" << endl;
@@ -39,12 +40,14 @@ void menuOrganizador() {
         // Agrega el código para manejar las opciones del menú del organizador
         switch (opcionOrganizador) {
             case 1:
+                cout<<"\n";
                 cout << "Seleccionaste: Crear actividad académica" << endl;
                 // Agrega el código para crear actividad académica
                 CrearActividad();
                 break;
 
             case 2:
+                cout<<"\n";
                 cout << "Seleccionaste: Eliminar actividad académica" << endl;
                 // Agrega el código para eliminar actividad académica
                 int idEliminar;
@@ -54,6 +57,7 @@ void menuOrganizador() {
                 break;
 
             case 3:
+                cout<<"\n";
                 cout << "Seleccionaste: Modificar actividad académica" << endl;
                 // Agrega el código para modificar actividad académica
                 int idModificar;
@@ -63,6 +67,7 @@ void menuOrganizador() {
                 break;
 
             case 4:
+                cout<<"\n";
                 cout << "Seleccionaste: Cambiar rol a alguien" << endl;
                 // Agrega el código para cambiar el rol de alguien
                 // ...
@@ -70,6 +75,7 @@ void menuOrganizador() {
                 break;
 
             case 5:
+                cout<<"\n";
                 cout << "Seleccionaste: Crear mailing" << endl;
                 // Agrega el código para crear mailing
                 // ...
@@ -77,6 +83,7 @@ void menuOrganizador() {
                 break;
 
             case 6:
+                cout<<"\n";
                 cout << "Seleccionaste: Borrar mailing" << endl;
                 // Agrega el código para borrar mailing
                 // ...
@@ -84,10 +91,12 @@ void menuOrganizador() {
                 break;
 
             case 7:
+                cout<<"\n";
                 cout << "Volviendo al menú principal." << endl;
                 break;
 
             default:
+                cout<<"\n";
                 cout << "Opción no válida. Por favor, seleccione una opción válida." << endl;
                 break;
         }
@@ -113,6 +122,7 @@ void menuDirectorAcademico() {
 
     // Bucle do-while para mantenerse en el menú del director académico
     do {
+        cout<<"\n";
         cout << "Menú Director Académico:" << endl;
         cout << "1. Enviar mailing" << endl;
         cout << "2. Ver actividades académicas disponibles" << endl;
@@ -123,21 +133,25 @@ void menuDirectorAcademico() {
         // Agrega el código para manejar las opciones del menú del director académico
         switch (opcionDirector) {
             case 1:
+                cout<<"\n";
                 cout << "Seleccionaste: Enviar mailing" << endl;
                 // Agrega el código para enviar mailing
                 break;
 
             case 2:
+                cout<<"\n";
                 cout << "Seleccionaste: Ver actividades académicas disponibles" << endl;
                 // Agrega el código para ver actividades académicas disponibles
                 ActividadesAcademicas::MostrarTodasActividades();
                 break;
 
             case 3:
+                cout<<"\n";
                 cout << "Volviendo al menú principal." << endl;
                 break;
 
             default:
+                cout<<"\n";
                 cout << "Opción no válida. Por favor, seleccione una opción válida." << endl;
                 break;
         }
@@ -149,6 +163,7 @@ void menuUsuario() {
     int opcionUsuario;
 
     do {
+        cout<<"\n";
         cout << "Menú Usuario:" << endl;
         cout << "1. Inscribirse en una actividad" << endl;
         cout << "2. Cancelar inscripción" << endl;
@@ -160,26 +175,31 @@ void menuUsuario() {
         // Agrega el código para manejar las opciones del menú del usuario
         switch (opcionUsuario) {
             case 1:
+                cout<<"\n";
                 cout << "Seleccionaste: Inscribirse en una actividad" << endl;
                 // Agrega el código para inscribirse en una actividad
                 break;
 
             case 2:
+                cout<<"\n";
                 cout << "Seleccionaste: Cancelar inscripción" << endl;
                 // Agrega el código para cancelar inscripción
                 break;
 
             case 3:
+                cout<<"\n";
                 cout << "Seleccionaste: Ver actividades disponibles" << endl;
                 // Agrega el código para ver actividades disponibles
                 ActividadesAcademicas::MostrarTodasActividades();
                 break;
 
             case 4:
+                cout<<"\n";
                 cout << "Volviendo al menú principal" << endl;
                 break;
 
             default:
+                cout<<"\n";
                 cout << "Opción no válida. Por favor, seleccione una opción válida." << endl;
                 break;
         }
@@ -201,25 +221,30 @@ int main() {
 
         switch (opcion) {
             case 1:
+                cout<<"\n";
                 cout << "¡Bienvenido, Organizador!" << endl;
                 menuOrganizador();
                 break;
 
             case 2:
+                cout<<"\n";
                 cout << "¡Hola, Director Academico!" << endl;
                 menuDirectorAcademico();
                 break;
 
             case 3:
+                cout<<"\n";
                 cout << "¡Hola, Usuario!" << endl;
                 menuUsuario();
                 break;
 
             case 4:
+                cout<<"\n";
                 cout << "Saliendo del programa. ¡Hasta luego!" << endl;
                 break;
 
             default:
+                cout<<"\n";
                 cout << "Opción no válida. Por favor, seleccione una opción válida." << endl;
                 break;
         }
