@@ -1,5 +1,6 @@
 #include "actividadesAcademicas.h"
 #include "actividadesAcademicas.cc"
+#include "listaUsuarios.h"
 #include <iostream>
 
 using namespace std;
@@ -178,6 +179,7 @@ void menuUsuario() {
                 cout<<"\n";
                 cout << "Seleccionaste: Inscribirse en una actividad" << endl;
                 // Agrega el código para inscribirse en una actividad
+
                 break;
 
             case 2:

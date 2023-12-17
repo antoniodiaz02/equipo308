@@ -1,57 +1,78 @@
 #include "listaUsuarios.h"
-#include "usuario.h"
 
-    
+// Implementaciones de las funciones...
 
+// Constructor de Usuario
+Usuario::Usuario(int id, const std::string& n) : id_usuario(id), nombre(n) {}
 
-  //Comprobar si un usuario esta dentro de la lista
-    bool usuarioExistente(const Usuario& usuario, const std::vector<Usuario>& listaUsuarios) {
-    for (const Usuario& usuarioExistente : listaUsuarios) {
-        if (usuarioExistente.getIdUsuario() == usuario.getIdUsuario()) {
+// Métodos de acceso de Usuario
+int Usuario::getIdUsuario() const {
+    return id_usuario;
+}
+
+const std::string& Usuario::getNombre() const {
+    return nombre;
+}
+
+// Constructor de ListaUsuarios
+ListaUsuarios::ListaUsuarios(int id) : id_actividad(id) {}
+
+// Métodos de ListaUsuarios
+bool ListaUsuarios::usuarioExistente(int idUsuario) const {
+    for (const Usuario& usuario : listaUsuarios) {
+        if (usuario.getIdUsuario() == idUsuario) {
             return true;
         }
     }
     return false;
-    }
-    //Comprobar si existe una actividad mediante su ID
-    bool actividadExistente(int idActividad) {
-    std::ifstream archivoEntrada("usuario_actividades.txt");
+}
 
-    if (!archivoEntrada.is_open()) {
-        std::cerr << "Error al abrir el archivo 'actividades.txt' para leer.\n";
-        return false;
-    }
+bool ListaUsuarios::actividadExistente(int idActividad) const {
+    return (idActividad == id_actividad);
+}
 
-    std::string linea;
-    while (std::getline(archivoEntrada, linea)) {
-        // Supongamos que cada actividad en el archivo tiene el formato "ID: <id>"
-        size_t pos = linea.find("ID: ");
-        if (pos != std::string::npos) {
-            int idEncontrado = std::stoi(linea.substr(pos + 4));
-            if (idEncontrado == idActividad) {
-                archivoEntrada.close();
-                return true;
+void ListaUsuarios::añadirUsuario(const Usuario& usuario) {
+    listaUsuarios.push_back(usuario);
+}
+
+void ListaUsuarios::mostrarUsuarios() const {
+    std::cout << "Usuarios en la actividad " << id_actividad << ":\n";
+    for (const Usuario& usuario : listaUsuarios) {
+        std::cout << "ID: " << usuario.getIdUsuario() << "\tNombre: " << usuario.getNombre() << "\n";
+    }
+}
+
+const std::string& ListaUsuarios::getNombreActividad() const {
+    // Supongamos que tienes un método para obtener el nombre de la actividad
+    // o que tienes el nombre almacenado en algún lugar
+    // Por ejemplo, podrías agregar un miembro string nombreActividad a la clase
+    // o un método que obtenga el nombre de una base de datos, etc.
+    // En este caso, devolveré un nombre ficticio "ActividadX" como ejemplo.
+    static const std::string nombreActividad = "ActividadX";
+    return nombreActividad;
+}
+
+// Implementación de añadirUsuarioActividad
+void añadirUsuarioActividad(int id_usuario, int id_actividad, const std::vector<ListaUsuarios>& listasUsuarios) {
+    for (const ListaUsuarios& lista : listasUsuarios) {
+        if (lista.actividadExistente(id_actividad)) {
+            if (!lista.usuarioExistente(id_usuario)) {
+                // El usuario no está añadido previamente
+                std::ofstream archivoSalida("usuarios_actividades.txt", std::ios::app);
+                if (archivoSalida.is_open()) {
+                    archivoSalida << "ID_Usuario: " << id_usuario << "\tNombre_Actividad: " << lista.getNombreActividad() << "\n";
+                    std::cout << "Usuario añadido a la actividad correctamente.\n";
+                    archivoSalida.close();
+                    return;  // Salir del bucle una vez que se ha añadido el usuario
+                } else {
+                    std::cerr << "Error al abrir el archivo 'usuarios_actividades.txt' para escribir.\n";
+                }
+            } else {
+                std::cout << "El usuario ya está añadido a esta actividad.\n";
+                return;
             }
         }
     }
 
-    archivoEntrada.close();
-    return false;
-}
-
-//Añadir a la actividad
-void añadirUsuarioActividad(const Usuario& usuario, int idActividad, ListaUsuarios& listaUsuarios) {
-    if (listaUsuarios.usuarioExistente(usuario.getIdUsuario()) && listaUsuarios.actividadExistente(idActividad)) {
-        std::ofstream archivoSalida("usuarios_actividades.txt", std::ios::app);
-
-        if (archivoSalida.is_open()) {
-            archivoSalida << "ID_Usuario: " << usuario.getIdUsuario() << "\tID_Actividad: " << idActividad << "\n";
-            std::cout << "Usuario añadido a la actividad correctamente.\n";
-            archivoSalida.close();
-        } else {
-            std::cerr << "Error al abrir el archivo 'usuarios_actividades.txt' para escribir.\n";
-        }
-    } else {
-        std::cout << "Usuario o actividad no existente en la lista.\n";
-    }
+    std::cout << "La actividad con ID " << id_actividad << " no existe en ninguna lista.\n";
 }

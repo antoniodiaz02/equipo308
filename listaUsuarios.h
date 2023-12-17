@@ -1,53 +1,43 @@
+#ifndef LISTAUSUARIOS_H
+#define LISTAUSUARIOS_H
+
 #include <iostream>
-#include <vector>
 #include <fstream>
-#include "usuario.h"
+#include <string>
+#include <vector>
+
+class Usuario {
+private:
+    int id_usuario;
+    std::string nombre;
+
+public:
+    Usuario(int id, const std::string& n);
+
+    int getIdUsuario() const;
+
+    const std::string& getNombre() const;
+};
 
 class ListaUsuarios {
 private:
-    int aforo;
     std::vector<Usuario> listaUsuarios;
     int id_actividad;
 
 public:
-    // Constructor
-    ListaUsuarios(int aforo, int id_actividad) : aforo(aforo), id_actividad(id_actividad) {}
+    ListaUsuarios(int id);
 
-    // Métodos de acceso (getters)
-    int getAforo() const {
-        return aforo;
-    }
+    bool usuarioExistente(int idUsuario) const;
 
-    int getIdActividad() const {
-        return id_actividad;
-    }
+    bool actividadExistente(int idActividad) const;
 
-    const std::vector<Usuario>& getListaUsuarios() const {
-        return listaUsuarios;
-    }
+    void añadirUsuario(const Usuario& usuario);
 
-    // Métodos de modificación (setters)
-    void setAforo(int nuevoAforo) {
-        aforo = nuevoAforo;
-    }
+    void mostrarUsuarios() const;
 
-    void setIdActividad(int nuevoIdActividad) {
-        id_actividad = nuevoIdActividad;
-    }
-
-    // Método para añadir usuario a la lista
-    void añadirUsuario(const Usuario& usuario) {
-        listaUsuarios.push_back(usuario);
-    }
-
-    //Comprobar si un usuario ya esta añadido
-    bool usuarioAñadido(const Usuario& usuario, const std::vector<Usuario>& listaUsuarios);
-
-    //Ver si una actividad existe
-    bool actividadExistente(int idActividad);
-
-    //Añadirlo si se cumple
-    
-    void añadirUsuarioActividad(int id_usuario, int idActividad);
-
+    const std::string& getNombreActividad() const;
 };
+
+void añadirUsuarioActividad(int id_usuario, int id_actividad, const std::vector<ListaUsuarios>& listasUsuarios);
+
+#endif
