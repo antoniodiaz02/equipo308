@@ -46,3 +46,56 @@ void ActividadesUsuarios::mostrarArchivo() {
         perror("Error");
     }
 }
+
+void ActividadesUsuarios::cancelarInscripcion(int idUsuario, int idActividad) {
+    std::ifstream archivoEntrada("usuariosinscritos.txt");
+    std::ofstream archivoTemp("temp.txt");
+
+    if (!archivoEntrada.is_open() || !archivoTemp.is_open()) {
+        std::cerr << "Error al abrir los archivos.\n";
+        return;
+    }
+
+    std::string linea;
+    bool inscripcionEncontrada = false;
+
+    while (std::getline(archivoEntrada, linea)) {
+        size_t posIdUsuario = linea.find("ID Usuario: ");
+        if (posIdUsuario != std::string::npos) {
+            int idUsuarioEncontrado = std::stoi(linea.substr(posIdUsuario + 12));
+
+            // Obtener el id de la actividad desde la línea
+            size_t posIdActividad = linea.find("ID Actividad: ");
+            if (posIdActividad != std::string::npos) {
+                int idActividadEncontrado = std::stoi(linea.substr(posIdActividad + 14));
+
+                // Verificar tanto el ID de usuario como el ID de actividad
+                if (idUsuarioEncontrado == idUsuario && idActividadEncontrado == idActividad) {
+                    inscripcionEncontrada = true;
+                    continue;  // No copiar la línea actual al archivo temporal
+                }
+            }
+        }
+        archivoTemp << linea << '\n';
+    }
+
+    archivoEntrada.close();
+    archivoTemp.close();
+
+    // Renombrar el archivo temporal al archivo original
+    if (inscripcionEncontrada) {
+        if (std::remove("usuariosinscritos.txt") != 0) {
+            std::cerr << "Error al borrar el archivo original.\n";
+            return;
+        }
+        if (std::rename("temp.txt", "usuariosinscritos.txt") != 0) {
+            std::cerr << "Error al renombrar el archivo temporal.\n";
+        }
+        std::cout<< "\n";
+        std::cout << "Inscripción cancelada correctamente.\n";
+    } else {
+        std::remove("temp.txt");  // No se encontró la inscripción, eliminar el archivo temporal
+        std::cout << "No se encontró ninguna inscripción con el ID de usuario y actividad proporcionados.\n";
+    }
+}
+

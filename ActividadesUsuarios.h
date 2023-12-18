@@ -18,6 +18,7 @@ public:
     int getIdActividad() const;
     void guardarEnArchivo();
     static void mostrarArchivo();
+    static void cancelarInscripcion(int idUsuario, int idActividad);
 };
 
 #endif // ACTIVIDADESUSUARIOS_H

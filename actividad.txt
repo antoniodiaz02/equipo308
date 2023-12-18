@@ -1,2 +1,35 @@
 
  
+ID: 1
+Nombre: 1
+Fecha: 1
+Tematica: 1
+Aforo: 1
+Ubicacion: 1
+Precio: 1.000000
+Tipo: 1
+ID_Director: 1
+
+ 
+ID: 5
+Nombre: 5
+Fecha: 5
+Tematica: 5
+Aforo: 5
+Ubicacion: 5
+Precio: 5.000000
+Tipo: 5
+ID_Director: 5
+
+ 
+ID: 8
+Nombre: 8
+Fecha: 8
+Tematica: 8
+Aforo: 8
+Ubicacion: 8
+Precio: 8.000000
+Tipo: 8
+ID_Director: 8
+
+ 

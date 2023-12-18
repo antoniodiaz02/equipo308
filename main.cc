@@ -202,6 +202,13 @@ void menuUsuario() {
                 cout<<"\n";
                 cout << "Seleccionaste: Cancelar inscripción" << endl;
                 // Agrega el código para cancelar inscripción
+                int idUsuariocancelar;
+                int idActividadecancelar;
+                cout << "Ingrese el ID del usuario a eliminar: ";
+                cin >> idUsuariocancelar;
+                cout << "Ingrese el ID de la actividad a la que esta inscrito: ";
+                cin>> idActividadecancelar;
+                ActividadesUsuarios::cancelarInscripcion(idUsuariocancelar,idActividadecancelar);
                 break;
 
             case 3:
@@ -214,7 +221,7 @@ void menuUsuario() {
 	    case 4:
                 cout<<"\n";
                 cout << "Seleccionaste: Mostrar inscripción-Usuario" << endl;
-		ActividadesUsuarios::mostrarArchivo();
+		        ActividadesUsuarios::mostrarArchivo();
                 break;
 
             case 5:
