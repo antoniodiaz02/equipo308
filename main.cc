@@ -2,7 +2,12 @@
 #include "actividadesAcademicas.cc"
 #include "ActividadesUsuarios.h"
 #include "ActividadesUsuarios.cc"
+#include "MailingList.cc"
+#include "MailingList.h"
 #include <iostream>
+#include <cstdlib>
+#include <thread>
+#include <chrono>
 
 using namespace std;
 
@@ -38,6 +43,7 @@ void menuOrganizador() {
         cout << "7. Salir al menú principal" << endl;
         cout << "Ingrese el número correspondiente a su elección: ";
         cin >> opcionOrganizador;
+	MailingList listaCorreos;
 
         // Agrega el código para manejar las opciones del menú del organizador
         switch (opcionOrganizador) {
@@ -71,7 +77,6 @@ void menuOrganizador() {
             case 4:
                 cout<<"\n";
                 cout << "Seleccionaste: Cambiar rol a alguien" << endl;
-                // Agrega el código para cambiar el rol de alguien
                 // ...
 
                 break;
@@ -79,7 +84,7 @@ void menuOrganizador() {
             case 5:
                 cout<<"\n";
                 cout << "Seleccionaste: Crear mailing" << endl;
-                // Agrega el código para crear mailing
+		listaCorreos.crearMailing();
                 // ...
 
                 break;
@@ -131,13 +136,35 @@ void menuDirectorAcademico() {
         cout << "3. Salir al menú principal" << endl;
         cout << "Ingrese el número correspondiente a su elección: ";
         cin >> opcionDirector;
-
+	string mailing;
+ 	string comando;
         // Agrega el código para manejar las opciones del menú del director académico
         switch (opcionDirector) {
             case 1:
-                cout<<"\n";
-                cout << "Seleccionaste: Enviar mailing" << endl;
-                // Agrega el código para enviar mailing
+		 int opcion;
+
+		std::cout << "Selecciona a quién enviar el código:" << std::endl;
+    		std::cout << "1. Estudiantes de la Politécnica" << std::endl;
+    		std::cout << "2. Alumnos de Veterinaria" << std::endl;
+    		std::cout << "3. A todos" << std::endl;
+
+    		std::cin >> opcion;
+
+
+    		if (opcion == 1) {
+        		mailing = "politecnicamailing.txt";
+    		} else if (opcion == 2) {
+        		mailing = "veterinariamailing.txt";
+    		} else if (opcion == 3) {
+        		mailing = "todosmailing.txt";
+    		} else {
+        		std::cerr << "Opción no válida." << std::endl;
+    		}
+    		// Construye el comando para ejecutar el script de Python con la dirección de correo electrónico como argumento
+    		comando = "python3 enviarmailing.py " + mailing;
+
+    		// Ejecuta el comando
+    		system(comando.c_str());
                 break;
 
             case 2:
