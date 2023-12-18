@@ -1,6 +1,7 @@
 #include "actividadesAcademicas.h"
 #include "actividadesAcademicas.cc"
-#include "listaUsuarios.h"
+#include "ActividadesUsuarios.h"
+#include "ActividadesUsuarios.cc"
 #include <iostream>
 
 using namespace std;
@@ -169,18 +170,33 @@ void menuUsuario() {
         cout << "1. Inscribirse en una actividad" << endl;
         cout << "2. Cancelar inscripción" << endl;
         cout << "3. Ver actividades disponibles" << endl;
+	cout << "3. Ver actividades con los usuarios incritos" << endl;
         cout << "4. Salir al menú principal" << endl;
         cout << "Ingrese el número correspondiente a su elección: ";
         cin >> opcionUsuario;
-
+	ActividadesUsuarios ActividadUser(0, 0);
         // Agrega el código para manejar las opciones del menú del usuario
         switch (opcionUsuario) {
             case 1:
-                cout<<"\n";
-                cout << "Seleccionaste: Inscribirse en una actividad" << endl;
-                // Agrega el código para inscribirse en una actividad
+			 // Opción 2: Inscribirse en una actividad
+            std::cout << "Seleccionaste: Inscribirse en una actividad" << std::endl;
+            
+            // Agrega el código para inscribirse en una actividad
+            int idUsuario, idActividad;
 
-                break;
+            // Solicitar al usuario que ingrese los IDs
+            std::cout << "Ingrese el ID del usuario: ";
+            std::cin >> idUsuario;
+
+            std::cout << "Ingrese el ID de la actividad: ";
+            std::cin >> idActividad;
+		
+            // Crear una instancia de ActividadesUsuarios y guardar en archivo
+            ActividadUser.setIdUsuario(idUsuario);
+            ActividadUser.setIdActividad(idActividad);
+            ActividadUser.guardarEnArchivo();
+            std::cout << "Usuario inscrito en la actividad " << idActividad << std::endl;
+            break;
 
             case 2:
                 cout<<"\n";
@@ -195,7 +211,13 @@ void menuUsuario() {
                 ActividadesAcademicas::MostrarTodasActividades();
                 break;
 
-            case 4:
+	    case 4:
+                cout<<"\n";
+                cout << "Seleccionaste: Mostrar inscripción-Usuario" << endl;
+		ActividadesUsuarios::mostrarArchivo();
+                break;
+
+            case 5:
                 cout<<"\n";
                 cout << "Volviendo al menú principal" << endl;
                 break;
@@ -206,7 +228,7 @@ void menuUsuario() {
                 break;
         }
 
-    } while (opcionUsuario != 4);
+    } while (opcionUsuario != 5);
 }
 
 int main() {
