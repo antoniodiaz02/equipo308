@@ -11,25 +11,16 @@ Tipo: 1
 ID_Director: 1
 
  
-ID: 5
-Nombre: 5
-Fecha: 5
-Tematica: 5
-Aforo: 5
-Ubicacion: 5
-Precio: 5.000000
-Tipo: 5
-ID_Director: 5
-
  
-ID: 8
-Nombre: 8
-Fecha: 8
-Tematica: 8
-Aforo: 8
-Ubicacion: 8
-Precio: 8.000000
-Tipo: 8
-ID_Director: 8
+ 
+ID: 12
+Nombre: 12
+Fecha: 12
+Tematica: 12
+Aforo: 12
+Ubicacion: 12
+Precio: 12.000000
+Tipo: 12
+ID_Director: 12
 
  

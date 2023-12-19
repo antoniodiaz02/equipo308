@@ -34,13 +34,9 @@ void menuOrganizador() {
    do {
         cout<<"\n";
         cout << "Menú Organizador:" << endl;
-        cout << "1. Crear actividad académica" << endl;
-        cout << "2. Eliminar actividad académica" << endl;
-        cout << "3. Modificar actividad académica" << endl;
-        cout << "4. Cambiar rol a alguien" << endl;
-        cout << "5. Crear mailing" << endl;
-        cout << "6. Borrar mailing" << endl;
-        cout << "7. Salir al menú principal" << endl;
+        cout << "1. Eliminar actividad académica" << endl;
+        cout << "2. Cambiar rol a alguien" << endl;
+        cout << "3. Salir al menú principal" << endl;
         cout << "Ingrese el número correspondiente a su elección: ";
         cin >> opcionOrganizador;
 	MailingList listaCorreos;
@@ -48,13 +44,6 @@ void menuOrganizador() {
         // Agrega el código para manejar las opciones del menú del organizador
         switch (opcionOrganizador) {
             case 1:
-                cout<<"\n";
-                cout << "Seleccionaste: Crear actividad académica" << endl;
-                // Agrega el código para crear actividad académica
-                CrearActividad();
-                break;
-
-            case 2:
                 cout<<"\n";
                 cout << "Seleccionaste: Eliminar actividad académica" << endl;
                 // Agrega el código para eliminar actividad académica
@@ -64,40 +53,14 @@ void menuOrganizador() {
                 ActividadesAcademicas::EliminarActividadPorID(idEliminar);
                 break;
 
+
+            case 2:
+                cout<<"\n";
+                cout << "Seleccionaste: Cambiar rol a un usuario" << endl;
+		cout << "Esta funcionalidad sera desarrollada en la version 2.0 de la aplicacion" << endl;
+                break;
+
             case 3:
-                cout<<"\n";
-                cout << "Seleccionaste: Modificar actividad académica" << endl;
-                // Agrega el código para modificar actividad académica
-                int idModificar;
-                cout << "Ingrese el ID de la actividad a modificar: ";
-                cin >> idModificar;
-                ActividadesAcademicas::ModificarActividadPorID(idModificar);
-                break;
-
-            case 4:
-                cout<<"\n";
-                cout << "Seleccionaste: Cambiar rol a alguien" << endl;
-                // ...
-
-                break;
-
-            case 5:
-                cout<<"\n";
-                cout << "Seleccionaste: Crear mailing" << endl;
-		listaCorreos.crearMailing();
-                // ...
-
-                break;
-
-            case 6:
-                cout<<"\n";
-                cout << "Seleccionaste: Borrar mailing" << endl;
-                // Agrega el código para borrar mailing
-                // ...
-
-                break;
-
-            case 7:
                 cout<<"\n";
                 cout << "Volviendo al menú principal." << endl;
                 break;
@@ -107,7 +70,7 @@ void menuOrganizador() {
                 cout << "Opción no válida. Por favor, seleccione una opción válida." << endl;
                 break;
         }
-    } while (opcionOrganizador != 7);
+    } while (opcionOrganizador != 3);
 
 }
 
@@ -133,7 +96,11 @@ void menuDirectorAcademico() {
         cout << "Menú Director Académico:" << endl;
         cout << "1. Enviar mailing" << endl;
         cout << "2. Ver actividades académicas disponibles" << endl;
-        cout << "3. Salir al menú principal" << endl;
+        cout << "3. Crear actividad académica" << endl;
+	cout << "4. Modificar actividad académica" << endl;
+	cout << "5. Ver lista usuarios incritos en actividades" << endl;
+	cout << "6. Salir al menú principal" << endl;
+
         cout << "Ingrese el número correspondiente a su elección: ";
         cin >> opcionDirector;
 	string mailing;
@@ -173,18 +140,39 @@ void menuDirectorAcademico() {
                 // Agrega el código para ver actividades académicas disponibles
                 ActividadesAcademicas::MostrarTodasActividades();
                 break;
-
-            case 3:
+	    
+	    case 3:
                 cout<<"\n";
+                cout << "Seleccionaste: Crear actividad academica" << endl;
+                // Agrega el código para ver actividades académicas disponibles
+                CrearActividad();
+                break;
+            case 4:
+                cout<<"\n";
+                cout <<"Seleccionaster: Modificar actividad academica:" << endl;
+		int id;
+		cout<<"Diga el id de la actividad que desea modificar" << endl;
+		cin>>id;
+		ActividadesAcademicas::ModificarActividadPorID(id);
+		
+                break;
+	    case 5:
+                cout<<"\n";
+                cout <<"Seleccionaste: Ver lista usuarios inscritos:" << endl;
+                ActividadesUsuarios::mostrarArchivo();
+                break;
+            case 6:
+		cout<<"\n";
                 cout << "Volviendo al menú principal." << endl;
                 break;
+
 
             default:
                 cout<<"\n";
                 cout << "Opción no válida. Por favor, seleccione una opción válida." << endl;
                 break;
         }
-    } while (opcionDirector != 3);
+    } while (opcionDirector != 6);
 }
 
 
@@ -197,8 +185,8 @@ void menuUsuario() {
         cout << "1. Inscribirse en una actividad" << endl;
         cout << "2. Cancelar inscripción" << endl;
         cout << "3. Ver actividades disponibles" << endl;
-	cout << "3. Ver actividades con los usuarios incritos" << endl;
-        cout << "4. Salir al menú principal" << endl;
+        cout << "4. Mostrar actividades con usuarios inscritos" << endl;
+	cout << "5. Salir al menú principal" << endl;
         cout << "Ingrese el número correspondiente a su elección: ";
         cin >> opcionUsuario;
 	ActividadesUsuarios ActividadUser(0, 0);
@@ -244,16 +232,14 @@ void menuUsuario() {
                 // Agrega el código para ver actividades disponibles
                 ActividadesAcademicas::MostrarTodasActividades();
                 break;
-
-	    case 4:
-                cout<<"\n";
-                cout << "Seleccionaste: Mostrar inscripción-Usuario" << endl;
-		        ActividadesUsuarios::mostrarArchivo();
+           case 4:
+		cout<<"\n";
+                cout <<"Seleccionaste: Ver lista usuarios inscritos:" << endl;
+                ActividadesUsuarios::mostrarArchivo();
                 break;
-
-            case 5:
-                cout<<"\n";
-                cout << "Volviendo al menú principal" << endl;
+	   case 5:
+		cout<<"\n";
+                cout << "Volviendo al menú principal." << endl;
                 break;
 
             default:

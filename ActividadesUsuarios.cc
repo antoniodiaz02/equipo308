@@ -31,7 +31,6 @@ void ActividadesUsuarios::guardarEnArchivo() {
 }
 
 void ActividadesUsuarios::mostrarArchivo() {
-    cout << "Depurando"<<endl;
     std::ifstream archivo("usuariosinscritos.txt");
     if (archivo.is_open()) {
         std::string linea;
