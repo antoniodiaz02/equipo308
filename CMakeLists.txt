@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.12)
-project(TuProyecto)
+project(equipo308)
 
 # Buscar Google Test
 find_package(GTest REQUIRED)
@@ -7,11 +7,16 @@ find_package(GTest REQUIRED)
 # Configurar los archivos fuente y de prueba
 set(SOURCES
     ActividadesUsuarios.cc
+    ActividadesUsuarios.h
+    actividadesAcademicas.cc
+    actividadesAcademicas.h
     # Agrega tus otros archivos fuente aquí
 )
 
 set(TEST_SOURCES
-    cancelarInscripcion-test.cc
+    test/cancelarInscripcion-test.cc
+    test/inscripcion-test.cc
+    test/modificaractividad-test.cc
     # Agrega otros archivos de prueba aquí
 )
 

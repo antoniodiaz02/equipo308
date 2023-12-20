@@ -1,4 +1,5 @@
 #include "actividadesAcademicas.h"
+
 ActividadesAcademicas::ActividadesAcademicas(int id_actividad_, string nombre_, string fecha_, string tematica_,
                                             int aforo_, string ubicacion_, float precio_, string tipo_,int id_director_) 
  {
@@ -13,6 +14,80 @@ ActividadesAcademicas::ActividadesAcademicas(int id_actividad_, string nombre_, 
     id_director = id_director_;
 }
 
+// Métodos Get
+int ActividadesAcademicas::getIdActividad() const {
+    return id_actividad;
+}
+
+std::string ActividadesAcademicas::getNombre() const {
+    return nombre;
+}
+
+std::string ActividadesAcademicas::getFecha() const {
+    return fecha;
+}
+
+std::string ActividadesAcademicas::getTematica() const {
+    return tematica;
+}
+
+int ActividadesAcademicas::getAforo() const {
+    return aforo;
+}
+
+std::string ActividadesAcademicas::getUbicacion() const {
+    return ubicacion;
+}
+
+float ActividadesAcademicas::getPrecio() const {
+    return precio;
+}
+
+std::string ActividadesAcademicas::getTipo() const {
+    return tipo;
+}
+
+int ActividadesAcademicas::getIdDirector() const {
+    return id_director;
+}
+
+// Métodos Set
+void ActividadesAcademicas::setIdActividad(int idactividad) {
+    id_actividad = idactividad;
+}
+
+void ActividadesAcademicas::setNombre(std::string nombre) {
+    nombre = nombre;
+}
+
+void ActividadesAcademicas::setFecha(std::string fecha) {
+    fecha = fecha;
+}
+
+void ActividadesAcademicas::setTematica(std::string tematica) {
+    tematica = tematica;
+}
+
+void ActividadesAcademicas::setAforo(int aforo) {
+    aforo = aforo;
+}
+
+void ActividadesAcademicas::setUbicacion(std::string ubicacion) {
+    ubicacion = ubicacion;
+}
+
+void ActividadesAcademicas::setPrecio(float precio) {
+    precio = precio;
+}
+
+void ActividadesAcademicas::setTipo(std::string tipo) {
+    tipo = tipo;
+}
+
+void ActividadesAcademicas::setIdDirector(int iddirector) {
+    id_director = iddirector;
+}
+
 
 string ActividadesAcademicas::MostrarActividad() 
 {
@@ -22,7 +97,7 @@ string ActividadesAcademicas::MostrarActividad()
 }
 
 
-ActividadesAcademicas CrearActividad()
+ActividadesAcademicas crearActividad()
 {
     int id;
     string nombre, fecha, tematica, ubicacion, tipo;
@@ -192,7 +267,4 @@ void ActividadesAcademicas::ModificarActividadPorID(int id) {
         std::remove("temp.txt");  // No se encontró la actividad, eliminar el archivo temporal
         std::cout << "No se encontró ninguna actividad con el ID proporcionado.\n";
     }
-
-    // Llamar a la función CrearActividad para crear y agregar la nueva versión de la actividad
-    CrearActividad();
 }

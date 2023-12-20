@@ -50,11 +50,6 @@ void ActividadesUsuarios::cancelarInscripcion(int idUsuario, int idActividad) {
     std::ifstream archivoEntrada("usuariosinscritos.txt");
     std::ofstream archivoTemp("temp.txt");
 
-    if (!archivoEntrada.is_open() || !archivoTemp.is_open()) {
-        std::cerr << "Error al abrir los archivos.\n";
-        return;
-    }
-
     std::string linea;
     bool inscripcionEncontrada = false;
 

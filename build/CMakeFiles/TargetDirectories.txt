@@ -1,0 +1,3 @@
+/home/guille/equipo308/build/CMakeFiles/Test.dir
+/home/guille/equipo308/build/CMakeFiles/edit_cache.dir
+/home/guille/equipo308/build/CMakeFiles/rebuild_cache.dir

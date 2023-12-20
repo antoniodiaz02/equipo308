@@ -145,7 +145,7 @@ void menuDirectorAcademico() {
                 cout<<"\n";
                 cout << "Seleccionaste: Crear actividad academica" << endl;
                 // Agrega el código para ver actividades académicas disponibles
-                CrearActividad();
+                crearActividad();
                 break;
             case 4:
                 cout<<"\n";

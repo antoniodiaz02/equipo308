@@ -24,3 +24,14 @@ Tipo: 12
 ID_Director: 12
 
  
+ID: 1
+Nombre: 1
+Fecha: 1
+Tematica: 1
+Aforo: 1
+Ubicacion: 1
+Precio: 1.000000
+Tipo: 1
+ID_Director: 1
+
+ 

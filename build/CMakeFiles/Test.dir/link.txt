@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/Test.dir/test/cancelarInscripcion-test.cc.o CMakeFiles/Test.dir/test/inscripcion-test.cc.o CMakeFiles/Test.dir/test/crearActividad-test.cc.o CMakeFiles/Test.dir/ActividadesUsuarios.cc.o CMakeFiles/Test.dir/actividadesAcademicas.cc.o -o Test  /usr/local/lib/libgtest.a /usr/local/lib/libgtest_main.a /usr/local/lib/libgtest.a 
