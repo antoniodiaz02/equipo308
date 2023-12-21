@@ -717,7 +717,7 @@ CMakeFiles/Test.dir/test/cancelarInscripcion-test.cc.o: ../test/cancelarInscripc
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
   /usr/include/c++/11/bits/fstream.tcc
 
-CMakeFiles/Test.dir/test/crearActividad-test.cc.o: ../test/crearActividad-test.cc \
+CMakeFiles/Test.dir/test/constructorActividadesAcademicas-test.cc.o: ../test/constructorActividadesAcademicas-test.cc \
   /usr/include/stdc-predef.h \
   /usr/local/include/gtest/gtest.h \
   /usr/include/c++/11/cstddef \
@@ -1053,6 +1053,7 @@ CMakeFiles/Test.dir/test/crearActividad-test.cc.o: ../test/crearActividad-test.c
   /usr/local/include/gtest/gtest-typed-test.h \
   /usr/local/include/gtest/gtest_pred_impl.h \
   /usr/local/include/gtest/gtest_prod.h \
+  ../actividadesAcademicas.cc \
   ../actividadesAcademicas.h \
   /usr/include/c++/11/fstream \
   /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
@@ -1401,8 +1402,13 @@ CMakeFiles/Test.dir/test/inscripcion-test.cc.o: ../test/inscripcion-test.cc \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
   /usr/include/c++/11/bits/fstream.tcc
 
+CMakeFiles/Test.dir/test/modificaractividad-test.cc.o: ../test/modificaractividad-test.cc \
+  /usr/include/stdc-predef.h
+
 
 ../test/inscripcion-test.cc:
+
+../test/constructorActividadesAcademicas-test.cc:
 
 /usr/local/include/gtest/gtest_prod.h:
 
@@ -1537,6 +1543,8 @@ CMakeFiles/Test.dir/test/inscripcion-test.cc.o: ../test/inscripcion-test.cc \
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
+
+../test/modificaractividad-test.cc:
 
 /usr/include/signal.h:
 
@@ -1787,8 +1795,6 @@ CMakeFiles/Test.dir/test/inscripcion-test.cc.o: ../test/inscripcion-test.cc \
 /usr/include/x86_64-linux-gnu/asm/errno.h:
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
-
-../test/crearActividad-test.cc:
 
 ../ActividadesUsuarios.cc:
 

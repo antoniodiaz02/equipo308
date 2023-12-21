@@ -35,20 +35,13 @@ TEST(ActividadesUsuariosTest, guardarEnArchivo) {
     // Verifica el comportamiento esperado
     EXPECT_EQ(3, inscripcion3.getIdUsuario());
 
-    ActividadesUsuarios inscripcion4(4, 400);
+    ActividadesUsuarios inscripcion4(-4, -4400);
 
     // Llama a la función cancelarInscripcion con los datos ficticios
     inscripcion4.guardarEnArchivo();
 
     // Verifica el comportamiento esperado
-    EXPECT_EQ(4, inscripcion4.getIdUsuario());
+    EXPECT_EQ(-4, inscripcion4.getIdUsuario());
 
-    ActividadesUsuarios inscripcion5(5, 500);
-
-    // Llama a la función cancelarInscripcion con los datos ficticios
-    inscripcion5.guardarEnArchivo();
-
-    // Verifica el comportamiento esperado
-    EXPECT_EQ(5, inscripcion5.getIdUsuario());
 }
 

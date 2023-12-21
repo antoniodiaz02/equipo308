@@ -97,24 +97,38 @@ CMakeFiles/Test.dir/test/inscripcion-test.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/test/inscripcion-test.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guille/equipo308/test/inscripcion-test.cc -o CMakeFiles/Test.dir/test/inscripcion-test.cc.s
 
-CMakeFiles/Test.dir/test/crearActividad-test.cc.o: CMakeFiles/Test.dir/flags.make
-CMakeFiles/Test.dir/test/crearActividad-test.cc.o: ../test/crearActividad-test.cc
-CMakeFiles/Test.dir/test/crearActividad-test.cc.o: CMakeFiles/Test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guille/equipo308/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Test.dir/test/crearActividad-test.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Test.dir/test/crearActividad-test.cc.o -MF CMakeFiles/Test.dir/test/crearActividad-test.cc.o.d -o CMakeFiles/Test.dir/test/crearActividad-test.cc.o -c /home/guille/equipo308/test/crearActividad-test.cc
+CMakeFiles/Test.dir/test/modificaractividad-test.cc.o: CMakeFiles/Test.dir/flags.make
+CMakeFiles/Test.dir/test/modificaractividad-test.cc.o: ../test/modificaractividad-test.cc
+CMakeFiles/Test.dir/test/modificaractividad-test.cc.o: CMakeFiles/Test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guille/equipo308/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Test.dir/test/modificaractividad-test.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Test.dir/test/modificaractividad-test.cc.o -MF CMakeFiles/Test.dir/test/modificaractividad-test.cc.o.d -o CMakeFiles/Test.dir/test/modificaractividad-test.cc.o -c /home/guille/equipo308/test/modificaractividad-test.cc
 
-CMakeFiles/Test.dir/test/crearActividad-test.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test.dir/test/crearActividad-test.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/guille/equipo308/test/crearActividad-test.cc > CMakeFiles/Test.dir/test/crearActividad-test.cc.i
+CMakeFiles/Test.dir/test/modificaractividad-test.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test.dir/test/modificaractividad-test.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/guille/equipo308/test/modificaractividad-test.cc > CMakeFiles/Test.dir/test/modificaractividad-test.cc.i
 
-CMakeFiles/Test.dir/test/crearActividad-test.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/test/crearActividad-test.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guille/equipo308/test/crearActividad-test.cc -o CMakeFiles/Test.dir/test/crearActividad-test.cc.s
+CMakeFiles/Test.dir/test/modificaractividad-test.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/test/modificaractividad-test.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guille/equipo308/test/modificaractividad-test.cc -o CMakeFiles/Test.dir/test/modificaractividad-test.cc.s
+
+CMakeFiles/Test.dir/test/constructorActividadesAcademicas-test.cc.o: CMakeFiles/Test.dir/flags.make
+CMakeFiles/Test.dir/test/constructorActividadesAcademicas-test.cc.o: ../test/constructorActividadesAcademicas-test.cc
+CMakeFiles/Test.dir/test/constructorActividadesAcademicas-test.cc.o: CMakeFiles/Test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guille/equipo308/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Test.dir/test/constructorActividadesAcademicas-test.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Test.dir/test/constructorActividadesAcademicas-test.cc.o -MF CMakeFiles/Test.dir/test/constructorActividadesAcademicas-test.cc.o.d -o CMakeFiles/Test.dir/test/constructorActividadesAcademicas-test.cc.o -c /home/guille/equipo308/test/constructorActividadesAcademicas-test.cc
+
+CMakeFiles/Test.dir/test/constructorActividadesAcademicas-test.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test.dir/test/constructorActividadesAcademicas-test.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/guille/equipo308/test/constructorActividadesAcademicas-test.cc > CMakeFiles/Test.dir/test/constructorActividadesAcademicas-test.cc.i
+
+CMakeFiles/Test.dir/test/constructorActividadesAcademicas-test.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/test/constructorActividadesAcademicas-test.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guille/equipo308/test/constructorActividadesAcademicas-test.cc -o CMakeFiles/Test.dir/test/constructorActividadesAcademicas-test.cc.s
 
 CMakeFiles/Test.dir/ActividadesUsuarios.cc.o: CMakeFiles/Test.dir/flags.make
 CMakeFiles/Test.dir/ActividadesUsuarios.cc.o: ../ActividadesUsuarios.cc
 CMakeFiles/Test.dir/ActividadesUsuarios.cc.o: CMakeFiles/Test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guille/equipo308/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Test.dir/ActividadesUsuarios.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guille/equipo308/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Test.dir/ActividadesUsuarios.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Test.dir/ActividadesUsuarios.cc.o -MF CMakeFiles/Test.dir/ActividadesUsuarios.cc.o.d -o CMakeFiles/Test.dir/ActividadesUsuarios.cc.o -c /home/guille/equipo308/ActividadesUsuarios.cc
 
 CMakeFiles/Test.dir/ActividadesUsuarios.cc.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/Test.dir/ActividadesUsuarios.cc.s: cmake_force
 CMakeFiles/Test.dir/actividadesAcademicas.cc.o: CMakeFiles/Test.dir/flags.make
 CMakeFiles/Test.dir/actividadesAcademicas.cc.o: ../actividadesAcademicas.cc
 CMakeFiles/Test.dir/actividadesAcademicas.cc.o: CMakeFiles/Test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guille/equipo308/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Test.dir/actividadesAcademicas.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guille/equipo308/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Test.dir/actividadesAcademicas.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Test.dir/actividadesAcademicas.cc.o -MF CMakeFiles/Test.dir/actividadesAcademicas.cc.o.d -o CMakeFiles/Test.dir/actividadesAcademicas.cc.o -c /home/guille/equipo308/actividadesAcademicas.cc
 
 CMakeFiles/Test.dir/actividadesAcademicas.cc.i: cmake_force
@@ -143,7 +157,8 @@ CMakeFiles/Test.dir/actividadesAcademicas.cc.s: cmake_force
 Test_OBJECTS = \
 "CMakeFiles/Test.dir/test/cancelarInscripcion-test.cc.o" \
 "CMakeFiles/Test.dir/test/inscripcion-test.cc.o" \
-"CMakeFiles/Test.dir/test/crearActividad-test.cc.o" \
+"CMakeFiles/Test.dir/test/modificaractividad-test.cc.o" \
+"CMakeFiles/Test.dir/test/constructorActividadesAcademicas-test.cc.o" \
 "CMakeFiles/Test.dir/ActividadesUsuarios.cc.o" \
 "CMakeFiles/Test.dir/actividadesAcademicas.cc.o"
 
@@ -152,7 +167,8 @@ Test_EXTERNAL_OBJECTS =
 
 Test: CMakeFiles/Test.dir/test/cancelarInscripcion-test.cc.o
 Test: CMakeFiles/Test.dir/test/inscripcion-test.cc.o
-Test: CMakeFiles/Test.dir/test/crearActividad-test.cc.o
+Test: CMakeFiles/Test.dir/test/modificaractividad-test.cc.o
+Test: CMakeFiles/Test.dir/test/constructorActividadesAcademicas-test.cc.o
 Test: CMakeFiles/Test.dir/ActividadesUsuarios.cc.o
 Test: CMakeFiles/Test.dir/actividadesAcademicas.cc.o
 Test: CMakeFiles/Test.dir/build.make
@@ -160,7 +176,7 @@ Test: /usr/local/lib/libgtest.a
 Test: /usr/local/lib/libgtest_main.a
 Test: /usr/local/lib/libgtest.a
 Test: CMakeFiles/Test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/guille/equipo308/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/guille/equipo308/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

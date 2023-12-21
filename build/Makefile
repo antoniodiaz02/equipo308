@@ -201,29 +201,29 @@ test/cancelarInscripcion-test.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/cancelarInscripcion-test.cc.s
 .PHONY : test/cancelarInscripcion-test.cc.s
 
-test/crearActividad-test.o: test/crearActividad-test.cc.o
-.PHONY : test/crearActividad-test.o
+test/constructorActividadesAcademicas-test.o: test/constructorActividadesAcademicas-test.cc.o
+.PHONY : test/constructorActividadesAcademicas-test.o
 
 # target to build an object file
-test/crearActividad-test.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/crearActividad-test.cc.o
-.PHONY : test/crearActividad-test.cc.o
+test/constructorActividadesAcademicas-test.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/constructorActividadesAcademicas-test.cc.o
+.PHONY : test/constructorActividadesAcademicas-test.cc.o
 
-test/crearActividad-test.i: test/crearActividad-test.cc.i
-.PHONY : test/crearActividad-test.i
+test/constructorActividadesAcademicas-test.i: test/constructorActividadesAcademicas-test.cc.i
+.PHONY : test/constructorActividadesAcademicas-test.i
 
 # target to preprocess a source file
-test/crearActividad-test.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/crearActividad-test.cc.i
-.PHONY : test/crearActividad-test.cc.i
+test/constructorActividadesAcademicas-test.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/constructorActividadesAcademicas-test.cc.i
+.PHONY : test/constructorActividadesAcademicas-test.cc.i
 
-test/crearActividad-test.s: test/crearActividad-test.cc.s
-.PHONY : test/crearActividad-test.s
+test/constructorActividadesAcademicas-test.s: test/constructorActividadesAcademicas-test.cc.s
+.PHONY : test/constructorActividadesAcademicas-test.s
 
 # target to generate assembly for a file
-test/crearActividad-test.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/crearActividad-test.cc.s
-.PHONY : test/crearActividad-test.cc.s
+test/constructorActividadesAcademicas-test.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/constructorActividadesAcademicas-test.cc.s
+.PHONY : test/constructorActividadesAcademicas-test.cc.s
 
 test/inscripcion-test.o: test/inscripcion-test.cc.o
 .PHONY : test/inscripcion-test.o
@@ -249,6 +249,30 @@ test/inscripcion-test.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/inscripcion-test.cc.s
 .PHONY : test/inscripcion-test.cc.s
 
+test/modificaractividad-test.o: test/modificaractividad-test.cc.o
+.PHONY : test/modificaractividad-test.o
+
+# target to build an object file
+test/modificaractividad-test.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/modificaractividad-test.cc.o
+.PHONY : test/modificaractividad-test.cc.o
+
+test/modificaractividad-test.i: test/modificaractividad-test.cc.i
+.PHONY : test/modificaractividad-test.i
+
+# target to preprocess a source file
+test/modificaractividad-test.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/modificaractividad-test.cc.i
+.PHONY : test/modificaractividad-test.cc.i
+
+test/modificaractividad-test.s: test/modificaractividad-test.cc.s
+.PHONY : test/modificaractividad-test.s
+
+# target to generate assembly for a file
+test/modificaractividad-test.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/modificaractividad-test.cc.s
+.PHONY : test/modificaractividad-test.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -267,12 +291,15 @@ help:
 	@echo "... test/cancelarInscripcion-test.o"
 	@echo "... test/cancelarInscripcion-test.i"
 	@echo "... test/cancelarInscripcion-test.s"
-	@echo "... test/crearActividad-test.o"
-	@echo "... test/crearActividad-test.i"
-	@echo "... test/crearActividad-test.s"
+	@echo "... test/constructorActividadesAcademicas-test.o"
+	@echo "... test/constructorActividadesAcademicas-test.i"
+	@echo "... test/constructorActividadesAcademicas-test.s"
 	@echo "... test/inscripcion-test.o"
 	@echo "... test/inscripcion-test.i"
 	@echo "... test/inscripcion-test.s"
+	@echo "... test/modificaractividad-test.o"
+	@echo "... test/modificaractividad-test.i"
+	@echo "... test/modificaractividad-test.s"
 .PHONY : help
 
 

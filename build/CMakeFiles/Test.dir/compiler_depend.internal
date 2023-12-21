@@ -720,8 +720,8 @@ CMakeFiles/Test.dir/test/cancelarInscripcion-test.cc.o
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h
  /usr/include/c++/11/bits/fstream.tcc
 
-CMakeFiles/Test.dir/test/crearActividad-test.cc.o
- /home/guille/equipo308/test/crearActividad-test.cc
+CMakeFiles/Test.dir/test/constructorActividadesAcademicas-test.cc.o
+ /home/guille/equipo308/test/constructorActividadesAcademicas-test.cc
  /usr/include/stdc-predef.h
  /usr/local/include/gtest/gtest.h
  /usr/include/c++/11/cstddef
@@ -1057,6 +1057,7 @@ CMakeFiles/Test.dir/test/crearActividad-test.cc.o
  /usr/local/include/gtest/gtest-typed-test.h
  /usr/local/include/gtest/gtest_pred_impl.h
  /usr/local/include/gtest/gtest_prod.h
+ /home/guille/equipo308/actividadesAcademicas.cc
  /home/guille/equipo308/actividadesAcademicas.h
  /usr/include/c++/11/fstream
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h
@@ -1405,4 +1406,8 @@ CMakeFiles/Test.dir/test/inscripcion-test.cc.o
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h
  /usr/include/c++/11/bits/fstream.tcc
+
+CMakeFiles/Test.dir/test/modificaractividad-test.cc.o
+ /home/guille/equipo308/test/modificaractividad-test.cc
+ /usr/include/stdc-predef.h
 
