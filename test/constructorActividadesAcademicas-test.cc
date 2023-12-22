@@ -1,16 +1,14 @@
-// actividadesAcademicas-test.cc
 #include "gtest/gtest.h"
 #include "../actividadesAcademicas.h"
 #define ANSI_COLOR_BLUE "\033[1;34m"
 #define ANSI_COLOR_RESET "\033[0m"
 
-// Prueba del constructor parametrizado de ActividadesAcademicas
 TEST(ActividadesAcademicasTest, ActividadesAcademicas) {
     
     std::cout << ANSI_COLOR_BLUE << "---------------------" << ANSI_COLOR_RESET << std::endl;
     std::cout << ANSI_COLOR_BLUE << "EMPEZANDO TEST 5 QUE ES PARA PROBAR EL CONSTRUCTOR DE ACTIVIDADES ACADEMICAS" << ANSI_COLOR_RESET << std::endl;
     std::cout << ANSI_COLOR_BLUE << "---------------------" << ANSI_COLOR_RESET << std::endl;
-    // Parámetros para la actividad
+
     int id = 1;
     std::string nombre = "Actividad1";
     std::string fecha = "2023-01-01";
@@ -21,10 +19,8 @@ TEST(ActividadesAcademicasTest, ActividadesAcademicas) {
     std::string tipo = "Tipo1";
     int id_director = 101;
 
-    // Crear una instancia de ActividadesAcademicas usando el constructor parametrizado
     ActividadesAcademicas actividad(id, nombre, fecha, tematica, aforo, ubicacion, precio, tipo, id_director);
 
-    // Verificar que los atributos se han inicializado correctamente
     EXPECT_EQ(id, actividad.getIdActividad());
     EXPECT_EQ(nombre, actividad.getNombre());
     EXPECT_EQ(fecha, actividad.getFecha());

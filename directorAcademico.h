@@ -30,8 +30,7 @@ public:
     void setNombreCompleto(const std::string& nombre);
     void setContrasenia(const std::string& contrasenia);
 
-    // Método para guardar la información en un fichero
     void guardarEnFichero() const;
 };
 
-#endif // DIRECTOR_ACADEMICO_H
+#endif 

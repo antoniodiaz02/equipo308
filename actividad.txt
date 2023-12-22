@@ -3,15 +3,5 @@
  
  
  
-ID: 12
-Nombre: 12
-Fecha: 12
-Tematica: 12
-Aforo: 12
-Ubicacion: 12
-Precio: 12.000000
-Tipo: 12
-ID_Director: 12
-
  
  

@@ -41,7 +41,8 @@ void imprimirMenuOrganizador() {
     cout << "Menú Organizador:" << endl;
     cout << "1. " << GREEN << "Eliminar actividad académica" << RESET << endl;
     cout << "2. " << GREEN << "Cambiar rol a alguien" << RESET << endl;
-    cout << "3. " << YELLOW << "Salir al menú principal" << RESET << endl;
+    cout << "3. " << GREEN << "Listar actividades disponibles" << RESET << endl;
+    cout << "4. " << YELLOW << "Salir al menú principal" << RESET << endl;
     cout << "Ingrese el número correspondiente a su elección: ";
 }
 
@@ -109,6 +110,13 @@ void menuOrganizador() {
 
             case 3:
                 cout << "\n";
+                cout << GREEN << "Seleccionaste: Ver actividades académicas disponibles" << RESET << endl;
+                // Agrega el código para ver actividades académicas disponibles
+                ActividadesAcademicas::MostrarTodasActividades();
+                break;
+
+            case 4:
+                cout << "\n";
                 cout << YELLOW << "Volviendo al menú principal." << RESET << endl;
                 break;
 
@@ -116,7 +124,7 @@ void menuOrganizador() {
                 imprimirOpcionInvalida();
                 break;
         }
-    } while (opcionOrganizador != 3);
+    } while (opcionOrganizador != 4);
 }
 
 void menuDirectorAcademico() {
