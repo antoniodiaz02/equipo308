@@ -271,7 +271,6 @@ CMakeFiles/Test.dir/test/constructorActividadesAcademicas-test.cc.o: \
  /usr/local/include/gtest/gtest-typed-test.h \
  /usr/local/include/gtest/gtest_pred_impl.h \
  /usr/local/include/gtest/gtest_prod.h \
- /home/guille/equipo308/test/../actividadesAcademicas.cc \
  /home/guille/equipo308/test/../actividadesAcademicas.h \
  /usr/include/c++/11/fstream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \

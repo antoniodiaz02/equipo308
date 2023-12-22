@@ -1402,9 +1402,6 @@ CMakeFiles/Test.dir/test/inscripcion-test.cc.o: ../test/inscripcion-test.cc \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
   /usr/include/c++/11/bits/fstream.tcc
 
-CMakeFiles/Test.dir/test/modificaractividad-test.cc.o: ../test/modificaractividad-test.cc \
-  /usr/include/stdc-predef.h
-
 
 ../test/inscripcion-test.cc:
 
@@ -1543,8 +1540,6 @@ CMakeFiles/Test.dir/test/modificaractividad-test.cc.o: ../test/modificaractivida
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
-
-../test/modificaractividad-test.cc:
 
 /usr/include/signal.h:
 

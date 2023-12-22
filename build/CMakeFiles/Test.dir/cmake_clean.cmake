@@ -9,8 +9,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Test.dir/test/constructorActividadesAcademicas-test.cc.o.d"
   "CMakeFiles/Test.dir/test/inscripcion-test.cc.o"
   "CMakeFiles/Test.dir/test/inscripcion-test.cc.o.d"
-  "CMakeFiles/Test.dir/test/modificaractividad-test.cc.o"
-  "CMakeFiles/Test.dir/test/modificaractividad-test.cc.o.d"
   "Test"
   "Test.pdb"
 )

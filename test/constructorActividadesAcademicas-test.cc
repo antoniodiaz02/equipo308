@@ -1,6 +1,6 @@
 // actividadesAcademicas-test.cc
 #include "gtest/gtest.h"
-#include "../actividadesAcademicas.cc"
+#include "../actividadesAcademicas.h"
 #define ANSI_COLOR_BLUE "\033[1;34m"
 #define ANSI_COLOR_RESET "\033[0m"
 

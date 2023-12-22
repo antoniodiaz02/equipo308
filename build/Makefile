@@ -249,30 +249,6 @@ test/inscripcion-test.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/inscripcion-test.cc.s
 .PHONY : test/inscripcion-test.cc.s
 
-test/modificaractividad-test.o: test/modificaractividad-test.cc.o
-.PHONY : test/modificaractividad-test.o
-
-# target to build an object file
-test/modificaractividad-test.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/modificaractividad-test.cc.o
-.PHONY : test/modificaractividad-test.cc.o
-
-test/modificaractividad-test.i: test/modificaractividad-test.cc.i
-.PHONY : test/modificaractividad-test.i
-
-# target to preprocess a source file
-test/modificaractividad-test.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/modificaractividad-test.cc.i
-.PHONY : test/modificaractividad-test.cc.i
-
-test/modificaractividad-test.s: test/modificaractividad-test.cc.s
-.PHONY : test/modificaractividad-test.s
-
-# target to generate assembly for a file
-test/modificaractividad-test.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/modificaractividad-test.cc.s
-.PHONY : test/modificaractividad-test.cc.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -297,9 +273,6 @@ help:
 	@echo "... test/inscripcion-test.o"
 	@echo "... test/inscripcion-test.i"
 	@echo "... test/inscripcion-test.s"
-	@echo "... test/modificaractividad-test.o"
-	@echo "... test/modificaractividad-test.i"
-	@echo "... test/modificaractividad-test.s"
 .PHONY : help
 
 
