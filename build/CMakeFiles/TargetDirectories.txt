@@ -1,3 +1,0 @@
-/home/antonio/Desktop/equipo308/build/CMakeFiles/Test.dir
-/home/antonio/Desktop/equipo308/build/CMakeFiles/edit_cache.dir
-/home/antonio/Desktop/equipo308/build/CMakeFiles/rebuild_cache.dir
