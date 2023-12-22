@@ -5,7 +5,7 @@
 
 TEST(ActividadesUsuariosTest, guardarEnArchivo) {
     std::cout << ANSI_COLOR_BLUE << "---------------------" << ANSI_COLOR_RESET << std::endl;
-    std::cout << ANSI_COLOR_BLUE << "EMPEZANDO TEST 2 QUE ES PARA INSCRIPCION" << ANSI_COLOR_RESET << std::endl;
+    std::cout << ANSI_COLOR_BLUE << "EMPEZANDO TEST 3 QUE ES PARA INSCRIPCION" << ANSI_COLOR_RESET << std::endl;
     std::cout << ANSI_COLOR_BLUE << "---------------------" << ANSI_COLOR_RESET << std::endl;
     ActividadesUsuarios inscripcion(1, 100);
 

@@ -5,7 +5,7 @@
 
 TEST(ActividadesUsuariosTest, CancelarInscripcionDatosInvalidos) {
     std::cout << ANSI_COLOR_BLUE << "---------------------" << ANSI_COLOR_RESET << std::endl;
-    std::cout << ANSI_COLOR_BLUE << "EMPEZANDO TEST 3: CANCELAR INSCRIPCION CON DATOS INVÁLIDOS" << ANSI_COLOR_RESET << std::endl;
+    std::cout << ANSI_COLOR_BLUE << "EMPEZANDO TEST 2: CANCELAR INSCRIPCION CON DATOS INVÁLIDOS" << ANSI_COLOR_RESET << std::endl;
     std::cout << ANSI_COLOR_BLUE << "---------------------" << ANSI_COLOR_RESET << std::endl;
 
     ActividadesUsuarios inscripcionInvalida(6, 600);
