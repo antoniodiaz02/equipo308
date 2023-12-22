@@ -8,11 +8,14 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/guille/equipo308/ActividadesUsuarios.cc" "CMakeFiles/Test.dir/ActividadesUsuarios.cc.o" "gcc" "CMakeFiles/Test.dir/ActividadesUsuarios.cc.o.d"
-  "/home/guille/equipo308/actividadesAcademicas.cc" "CMakeFiles/Test.dir/actividadesAcademicas.cc.o" "gcc" "CMakeFiles/Test.dir/actividadesAcademicas.cc.o.d"
-  "/home/guille/equipo308/test/cancelarInscripcion-test.cc" "CMakeFiles/Test.dir/test/cancelarInscripcion-test.cc.o" "gcc" "CMakeFiles/Test.dir/test/cancelarInscripcion-test.cc.o.d"
-  "/home/guille/equipo308/test/constructorActividadesAcademicas-test.cc" "CMakeFiles/Test.dir/test/constructorActividadesAcademicas-test.cc.o" "gcc" "CMakeFiles/Test.dir/test/constructorActividadesAcademicas-test.cc.o.d"
-  "/home/guille/equipo308/test/inscripcion-test.cc" "CMakeFiles/Test.dir/test/inscripcion-test.cc.o" "gcc" "CMakeFiles/Test.dir/test/inscripcion-test.cc.o.d"
+  "/home/antonio/Desktop/equipo308/ActividadesUsuarios.cc" "CMakeFiles/Test.dir/ActividadesUsuarios.cc.o" "gcc" "CMakeFiles/Test.dir/ActividadesUsuarios.cc.o.d"
+  "/home/antonio/Desktop/equipo308/actividadesAcademicas.cc" "CMakeFiles/Test.dir/actividadesAcademicas.cc.o" "gcc" "CMakeFiles/Test.dir/actividadesAcademicas.cc.o.d"
+  "/home/antonio/Desktop/equipo308/test/cancelarInscripcion-test.cc" "CMakeFiles/Test.dir/test/cancelarInscripcion-test.cc.o" "gcc" "CMakeFiles/Test.dir/test/cancelarInscripcion-test.cc.o.d"
+  "/home/antonio/Desktop/equipo308/test/cancelarInscripcionInvalidos-test.cc" "CMakeFiles/Test.dir/test/cancelarInscripcionInvalidos-test.cc.o" "gcc" "CMakeFiles/Test.dir/test/cancelarInscripcionInvalidos-test.cc.o.d"
+  "/home/antonio/Desktop/equipo308/test/constructorActividadesAcademicas-test.cc" "CMakeFiles/Test.dir/test/constructorActividadesAcademicas-test.cc.o" "gcc" "CMakeFiles/Test.dir/test/constructorActividadesAcademicas-test.cc.o.d"
+  "/home/antonio/Desktop/equipo308/test/constructorActividadesAcademicasInvalidos-test.cc" "CMakeFiles/Test.dir/test/constructorActividadesAcademicasInvalidos-test.cc.o" "gcc" "CMakeFiles/Test.dir/test/constructorActividadesAcademicasInvalidos-test.cc.o.d"
+  "/home/antonio/Desktop/equipo308/test/inscripcion-test.cc" "CMakeFiles/Test.dir/test/inscripcion-test.cc.o" "gcc" "CMakeFiles/Test.dir/test/inscripcion-test.cc.o.d"
+  "/home/antonio/Desktop/equipo308/test/inscripcionInvalidos-test.cc" "CMakeFiles/Test.dir/test/inscripcionInvalidos-test.cc.o" "gcc" "CMakeFiles/Test.dir/test/inscripcionInvalidos-test.cc.o.d"
   )
 
 # Targets to which this target links.

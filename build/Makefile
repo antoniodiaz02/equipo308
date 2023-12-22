@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/guille/equipo308
+CMAKE_SOURCE_DIR = /home/antonio/Desktop/equipo308
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/guille/equipo308/build
+CMAKE_BINARY_DIR = /home/antonio/Desktop/equipo308/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/guille/equipo308/build/CMakeFiles /home/guille/equipo308/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonio/Desktop/equipo308/build/CMakeFiles /home/antonio/Desktop/equipo308/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/guille/equipo308/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonio/Desktop/equipo308/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -201,6 +201,30 @@ test/cancelarInscripcion-test.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/cancelarInscripcion-test.cc.s
 .PHONY : test/cancelarInscripcion-test.cc.s
 
+test/cancelarInscripcionInvalidos-test.o: test/cancelarInscripcionInvalidos-test.cc.o
+.PHONY : test/cancelarInscripcionInvalidos-test.o
+
+# target to build an object file
+test/cancelarInscripcionInvalidos-test.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/cancelarInscripcionInvalidos-test.cc.o
+.PHONY : test/cancelarInscripcionInvalidos-test.cc.o
+
+test/cancelarInscripcionInvalidos-test.i: test/cancelarInscripcionInvalidos-test.cc.i
+.PHONY : test/cancelarInscripcionInvalidos-test.i
+
+# target to preprocess a source file
+test/cancelarInscripcionInvalidos-test.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/cancelarInscripcionInvalidos-test.cc.i
+.PHONY : test/cancelarInscripcionInvalidos-test.cc.i
+
+test/cancelarInscripcionInvalidos-test.s: test/cancelarInscripcionInvalidos-test.cc.s
+.PHONY : test/cancelarInscripcionInvalidos-test.s
+
+# target to generate assembly for a file
+test/cancelarInscripcionInvalidos-test.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/cancelarInscripcionInvalidos-test.cc.s
+.PHONY : test/cancelarInscripcionInvalidos-test.cc.s
+
 test/constructorActividadesAcademicas-test.o: test/constructorActividadesAcademicas-test.cc.o
 .PHONY : test/constructorActividadesAcademicas-test.o
 
@@ -224,6 +248,30 @@ test/constructorActividadesAcademicas-test.s: test/constructorActividadesAcademi
 test/constructorActividadesAcademicas-test.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/constructorActividadesAcademicas-test.cc.s
 .PHONY : test/constructorActividadesAcademicas-test.cc.s
+
+test/constructorActividadesAcademicasInvalidos-test.o: test/constructorActividadesAcademicasInvalidos-test.cc.o
+.PHONY : test/constructorActividadesAcademicasInvalidos-test.o
+
+# target to build an object file
+test/constructorActividadesAcademicasInvalidos-test.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/constructorActividadesAcademicasInvalidos-test.cc.o
+.PHONY : test/constructorActividadesAcademicasInvalidos-test.cc.o
+
+test/constructorActividadesAcademicasInvalidos-test.i: test/constructorActividadesAcademicasInvalidos-test.cc.i
+.PHONY : test/constructorActividadesAcademicasInvalidos-test.i
+
+# target to preprocess a source file
+test/constructorActividadesAcademicasInvalidos-test.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/constructorActividadesAcademicasInvalidos-test.cc.i
+.PHONY : test/constructorActividadesAcademicasInvalidos-test.cc.i
+
+test/constructorActividadesAcademicasInvalidos-test.s: test/constructorActividadesAcademicasInvalidos-test.cc.s
+.PHONY : test/constructorActividadesAcademicasInvalidos-test.s
+
+# target to generate assembly for a file
+test/constructorActividadesAcademicasInvalidos-test.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/constructorActividadesAcademicasInvalidos-test.cc.s
+.PHONY : test/constructorActividadesAcademicasInvalidos-test.cc.s
 
 test/inscripcion-test.o: test/inscripcion-test.cc.o
 .PHONY : test/inscripcion-test.o
@@ -249,6 +297,30 @@ test/inscripcion-test.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/inscripcion-test.cc.s
 .PHONY : test/inscripcion-test.cc.s
 
+test/inscripcionInvalidos-test.o: test/inscripcionInvalidos-test.cc.o
+.PHONY : test/inscripcionInvalidos-test.o
+
+# target to build an object file
+test/inscripcionInvalidos-test.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/inscripcionInvalidos-test.cc.o
+.PHONY : test/inscripcionInvalidos-test.cc.o
+
+test/inscripcionInvalidos-test.i: test/inscripcionInvalidos-test.cc.i
+.PHONY : test/inscripcionInvalidos-test.i
+
+# target to preprocess a source file
+test/inscripcionInvalidos-test.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/inscripcionInvalidos-test.cc.i
+.PHONY : test/inscripcionInvalidos-test.cc.i
+
+test/inscripcionInvalidos-test.s: test/inscripcionInvalidos-test.cc.s
+.PHONY : test/inscripcionInvalidos-test.s
+
+# target to generate assembly for a file
+test/inscripcionInvalidos-test.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/inscripcionInvalidos-test.cc.s
+.PHONY : test/inscripcionInvalidos-test.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -267,12 +339,21 @@ help:
 	@echo "... test/cancelarInscripcion-test.o"
 	@echo "... test/cancelarInscripcion-test.i"
 	@echo "... test/cancelarInscripcion-test.s"
+	@echo "... test/cancelarInscripcionInvalidos-test.o"
+	@echo "... test/cancelarInscripcionInvalidos-test.i"
+	@echo "... test/cancelarInscripcionInvalidos-test.s"
 	@echo "... test/constructorActividadesAcademicas-test.o"
 	@echo "... test/constructorActividadesAcademicas-test.i"
 	@echo "... test/constructorActividadesAcademicas-test.s"
+	@echo "... test/constructorActividadesAcademicasInvalidos-test.o"
+	@echo "... test/constructorActividadesAcademicasInvalidos-test.i"
+	@echo "... test/constructorActividadesAcademicasInvalidos-test.s"
 	@echo "... test/inscripcion-test.o"
 	@echo "... test/inscripcion-test.i"
 	@echo "... test/inscripcion-test.s"
+	@echo "... test/inscripcionInvalidos-test.o"
+	@echo "... test/inscripcionInvalidos-test.i"
+	@echo "... test/inscripcionInvalidos-test.s"
 .PHONY : help
 
 

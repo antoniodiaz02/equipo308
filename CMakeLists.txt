@@ -17,6 +17,9 @@ set(TEST_SOURCES
     test/cancelarInscripcion-test.cc
     test/inscripcion-test.cc
     test/constructorActividadesAcademicas-test.cc
+    test/cancelarInscripcionInvalidos-test.cc
+    test/inscripcionInvalidos-test.cc
+    test/constructorActividadesAcademicasInvalidos-test.cc
     # Agrega otros archivos de prueba aquí
 )
 

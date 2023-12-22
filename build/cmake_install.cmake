@@ -1,4 +1,4 @@
-# Install script for directory: /home/guille/equipo308
+# Install script for directory: /home/antonio/Desktop/equipo308
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/guille/equipo308/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/antonio/Desktop/equipo308/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,6 +1,7 @@
 CMakeFiles/Test.dir/ActividadesUsuarios.cc.o: \
- /home/guille/equipo308/ActividadesUsuarios.cc /usr/include/stdc-predef.h \
- /home/guille/equipo308/ActividadesUsuarios.h \
+ /home/antonio/Desktop/equipo308/ActividadesUsuarios.cc \
+ /usr/include/stdc-predef.h \
+ /home/antonio/Desktop/equipo308/ActividadesUsuarios.h \
  /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

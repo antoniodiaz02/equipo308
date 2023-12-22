@@ -8,7 +8,7 @@
 TEST(ActividadesAcademicasTest, ActividadesAcademicas) {
     
     std::cout << ANSI_COLOR_BLUE << "---------------------" << ANSI_COLOR_RESET << std::endl;
-    std::cout << ANSI_COLOR_BLUE << "EMPEZANDO TEST 4 QUE ES PARA PROBAR EL CONSTRUCTOR DE ACTIVIDADES ACADEMICAS" << ANSI_COLOR_RESET << std::endl;
+    std::cout << ANSI_COLOR_BLUE << "EMPEZANDO TEST 5 QUE ES PARA PROBAR EL CONSTRUCTOR DE ACTIVIDADES ACADEMICAS" << ANSI_COLOR_RESET << std::endl;
     std::cout << ANSI_COLOR_BLUE << "---------------------" << ANSI_COLOR_RESET << std::endl;
     // Parámetros para la actividad
     int id = 1;

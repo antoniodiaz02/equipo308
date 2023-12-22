@@ -1,7 +1,7 @@
 CMakeFiles/Test.dir/actividadesAcademicas.cc.o: \
- /home/guille/equipo308/actividadesAcademicas.cc \
+ /home/antonio/Desktop/equipo308/actividadesAcademicas.cc \
  /usr/include/stdc-predef.h \
- /home/guille/equipo308/actividadesAcademicas.h \
+ /home/antonio/Desktop/equipo308/actividadesAcademicas.h \
  /usr/include/c++/11/fstream /usr/include/c++/11/istream \
  /usr/include/c++/11/ios /usr/include/c++/11/iosfwd \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
